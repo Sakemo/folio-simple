@@ -74,7 +74,7 @@
               <i class="fa-brands fa-html5"></i> HTML &amp; CSS
             </span>
             <div class="skill-bar">
-              <div class="skill-progress" style="width: 90%"></div>
+              <div class="skill-progress" style="width: 80%"></div>
             </div>
           </div>
           <div class="skill-item">
@@ -82,20 +82,20 @@
               <i class="fa-brands fa-js"></i> JavaScript
             </span>
             <div class="skill-bar">
-              <div class="skill-progress" style="width: 80%"></div>
-            </div>
+              <div class="skill-progress" style="width: 90%"></div>
+            </div> 
           </div>
           <div class="skill-item">
             <span class="skill-title">
               <i class="fa-brands fa-python"></i> Python
             </span>
             <div class="skill-bar">
-              <div class="skill-progress" style="width: 75%"></div>
+              <div class="skill-progress" style="width: 95%"></div>
             </div>
-          </div>
+          </div> 
           <div class="skill-item">
             <span class="skill-title">
-              <i class="fa-brands fa-react"></i> React
+              <i class="fa-brands fa-react"></i> Outros
             </span>
             <div class="skill-bar">
               <div class="skill-progress" style="width: 70%"></div>
@@ -278,10 +278,10 @@
                 </h3>
                 <div class="video-wrapper">
                   <video class="project-video" controls>
-                    <source src="/assets/passwords_gen.mov" type="video/mp4" />
+                    <source src="/assets/password.mp4" type="video/mp4" />
                     Seu navegador não suporta vídeos.
                   </video>
-                  <button class="expand-btn" onclick="openVideoModal('/assets/passwords_gen.mov')">
+                  <button class="expand-btn" onclick="openVideoModal('/assets/password.mp4')">
                     <i class="fa-solid fa-expand"></i>
                   </button>
                 </div>
@@ -306,14 +306,14 @@
               <!-- Slide 6 -->
               <div class="project-item">
                 <h3>
-                  <i class="fa-brands fa-js"></i> Game: Devil Seeds
+                  <i class="fa-solid fa-game"></i> Game: Devil Seeds
                 </h3>
                 <div class="video-wrapper">
                   <video class="project-video" controls>
-                    <source src="/assets/passwords_gen.mov" type="video/mp4" />
+                    <source src="/assets/devil_seeds.mov" type="video/mp4" />
                     Seu navegador não suporta vídeos.
                   </video>
-                  <button class="expand-btn" onclick="openVideoModal('/assets/passwords_gen.mov')">
+                  <button class="expand-btn" onclick="openVideoModal('/assets/devil_seeds.mov')">
                     <i class="fa-solid fa-expand"></i>
                   </button>
                 </div>
@@ -335,6 +335,37 @@
                   </a>
                 </div>
               </div>
+              <div class="project-item">
+                <h3>
+                  <i class="fa-brands fa-js"></i> Calculator.js
+                </h3>
+                <div class="video-wrapper">
+                  <video class="project-video" controls>
+                    <source src="/assets/calc.mp4" type="video/mp4" />
+                    Seu navegador não suporta vídeos.
+                  </video>
+                  <button class="expand-btn" onclick="openVideoModal('/assets/calc.mp4')">
+                    <i class="fa-solid fa-expand"></i>
+                  </button>
+                </div>
+                <p>
+                  Uma calculadora completa e versátil, desenvolvida para atender desde operações básicas até funções matemáticas avançadas, garantindo precisão e praticidade em seus cálculos.
+                </p>
+                <ul>
+                  <li>✔️ <strong>Operações Básicas:</strong> Adições, subtrações, multiplicações e divisões com facilidade.</li>
+                  <li>✔️ <strong>Operações Avançadas:</strong> Funções como raiz quadrada, exponenciação, logaritmos e muito mais.</li>
+                  <li>✔️ <strong>Trigonometria:</strong> Cálculos com seno, cosseno e tangente, em radianos ou graus.</li>
+                  <li>✔️ <strong>Memória:</strong> Registro da última resposta calculada para facilitar operações subsequentes.</li>
+                </ul>
+                <div class="project-buttons">
+                  <a href="https://sakemo.github.io/calculator-js/" target="_blank" class="demo-btn">
+                    <i class="fa-solid fa-play"></i> Demonstração
+                  </a>
+                  <a href="https://github.com/Sakemo/calculator-js" target="_blank" class="github-btn">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                </div>
+              </div>              
             </div>
             <button class="slider-btn next" onclick="nextSlide()">
               <i class="fa-solid fa-chevron-right"></i>
