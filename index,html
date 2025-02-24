@@ -306,7 +306,7 @@
               <!-- Slide 6 -->
               <div class="project-item">
                 <h3>
-                  <i class="fa-solid fa-game"></i> Game: Devil Seeds
+                  <i class="fa-solid fa-gamepad"></i> Game: Devil Seeds 
                 </h3>
                 <div class="video-wrapper">
                   <video class="project-video" controls>
@@ -373,14 +373,19 @@
           </div>
         </section>
 
-        <!-- Contact -->
-        <section id="contact" class="section">
-          <h2>Contato</h2>
-          <p>
-            Entre em contato pelo email:
-            <a href="mailto:youremail@example.com">youremail@example.com</a>
-          </p>
-        </section>
+      <!-- Contact -->
+      <section id="contact" class="section">
+        <h2>Contato</h2>
+        <p>Entre em contato pelos seguintes meios:</p>
+        <ul>
+          <li>Email: <a href="mailto:sketlen308@gmail.com">sketlen308@gmail.com</a></li>
+          <li>
+            WhatsApp/Telefone:
+            <a href="https://api.whatsapp.com/send/?phone=5588981346909" target="_blank">88981346909</a>
+          </li>
+        </ul>
+      </section>
+
       </main>
     </div>
 
