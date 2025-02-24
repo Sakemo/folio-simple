@@ -25,6 +25,8 @@ body.light-mode {
 
 /* Reset e estilos globais */
 * {
+  overflow-x: hidden;
+  overflow-y: hidden;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -157,8 +159,9 @@ a {
 .content-area {
   flex: 1;
   padding: 20px;
-  overflow-y: auto;
+  overflow-y: hidden;
   position: relative;
+  transition: height 0.5s ease;
 }
 
 /* Seções */
@@ -186,7 +189,9 @@ a {
   padding: 5px;
   width: 100%;
   height: auto;
+  transition: height 0.5s ease;
 }
+
 .slider-container .project-item {
   position: absolute;
   top: 0;

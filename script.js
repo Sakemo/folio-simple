@@ -2,16 +2,41 @@
 
 // Navegação entre seções
 function showSection(sectionId, element) {
+  // Remove a classe 'active' dos itens do menu e ativa o selecionado
   const menuItems = document.querySelectorAll(".nav-menu li");
   menuItems.forEach(item => item.classList.remove("active"));
   element.classList.add("active");
 
+  // Seleciona todas as seções e o container da área de conteúdo
   const sections = document.querySelectorAll(".section");
-  sections.forEach(sec => sec.classList.remove("active"));
+  const contentArea = document.querySelector(".content-area");
+  
+  let newSection;
+  sections.forEach(sec => {
+    if (sec.id === sectionId) {
+      sec.classList.add("active");
+      newSection = sec;
+    } else {
+      sec.classList.remove("active");
+    }
+  });
 
-  const target = document.getElementById(sectionId);
-  if (target) {
-    target.classList.add("active");
+  // Se a nova seção foi encontrada, anima a transição da altura
+  if (newSection) {
+    // Define a altura atual do container como fixa para permitir a transição
+    contentArea.style.height = contentArea.offsetHeight + "px";
+    // Força um reflow para garantir que o navegador registre o valor atual
+    contentArea.offsetHeight;
+    // Define a nova altura conforme a altura da seção ativa
+    contentArea.style.height = newSection.offsetHeight + "px";
+
+    // Após o término da transição, remove o valor inline para que o container volte a se ajustar automaticamente
+    contentArea.addEventListener("transitionend", function handler() {
+      contentArea.style.height = "auto";
+      contentArea.removeEventListener("transitionend", handler);
+    });
+
+    // Se a seção for 'skills', executa a animação das barras de progresso
     if (sectionId === "skills") {
       animateSkills();
     }
@@ -49,13 +74,18 @@ function toggleMode() {
 let currentSlide = 0;
 function updateSlide() {
   const slides = document.querySelectorAll(".slider-container .project-item");
+  const sliderContainer = document.querySelector(".slider-container");
+
   slides.forEach((slide, index) => {
     slide.classList.remove("active");
-    if(index === currentSlide) {
+    if (index === currentSlide) {
       slide.classList.add("active");
+      // Ajusta a altura do container para a altura do slide ativo
+      sliderContainer.style.height = slide.offsetHeight + "px";
     }
   });
 }
+
 function nextSlide() {
   const slides = document.querySelectorAll(".slider-container .project-item");
   currentSlide = (currentSlide + 1) % slides.length;
