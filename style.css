@@ -26,7 +26,7 @@ body.light-mode {
 /* Reset e estilos globais */
 * {
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: auto;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -318,4 +318,77 @@ a {
 
 li{
   list-style: none;
+}
+
+/* ... estilos existentes ... */
+
+/* Custom Scrollbar para navegadores WebKit (Chrome, Edge, Safari) */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--card-bg);
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 5px;
+  border: 2px solid var(--card-bg);
+}
+
+/* Custom Scrollbar para Firefox */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) var(--card-bg);
+}
+
+/* Estilo para a seção de Contato */
+#contact {
+  text-align: center;
+  padding: 20px;
+}
+
+#contact .contact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+#contact .contact-card {
+  background-color: var(--sidebar-bg);
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+#contact .contact-card:hover {
+  transform: scale(1.05);
+}
+
+#contact .contact-card i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--accent-color);
+}
+
+#contact .contact-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+#contact .contact-card a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contact .contact-card p {
+  font-size: 1rem;
+  margin: 0;
 }
