@@ -1,428 +1,234 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alex Portfolio</title>
-    <!-- Font Awesome para ícones -->
-    <script src="https://kit.fontawesome.com/1f26dd467f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <!-- SIDEBAR -->
-      <aside class="sidebar">
-        <div class="profile-card">
-          <img src="assets/Profile picture 2.png" alt="Avatar" class="avatar" />
-          <h1 class="profile-name">Alex K.</h1>
-          <p class="profile-role">Desenvolvedor de Software</p>
-          <!-- Link para GitHub -->
-          <a href="https://github.com/Sakemo" target="_blank" class="github-link">
-            <i class="fab fa-github"></i> GitHub
-          </a>
-        </div>
 
-        <!-- Botão de alternância de modo (claro/escuro) -->
-        <div class="mode-toggle-container">
-          <button id="mode-toggle" onclick="toggleMode()">
-            <i class="fas fa-moon"></i>
-          </button>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Portfolio</title>
+  <!-- Font Awesome para ícones -->
+  <script src="https://kit.fontawesome.com/1f26dd467f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-        <nav class="nav-menu">
-          <ul>
-            <li class="active" onclick="showSection('about', this)">
-              <i class="fa-solid fa-user"></i> Sobre
-            </li>
-            <li onclick="showSection('skills', this)">
-              <i class="fa-solid fa-code"></i> Habilidades
-            </li>
-            <li onclick="showSection('projects', this)">
-              <i class="fa-solid fa-briefcase"></i> Projetos
-            </li>
-            <li onclick="showSection('contact', this)">
-              <i class="fa-solid fa-envelope"></i> Contato
-            </li>
-          </ul>
-        </nav>
-      </aside>
-
-      <!-- CONTEÚDO PRINCIPAL -->
-      <main class="content-area">
-        <!-- About -->
-        <section id="about" class="section active">
-          <h2>Sobre</h2>
-          <p>
-            Opa, eu sou o Alex!
-            <br /><br />
-            E desde sempre, a tecnologia foi minha paixão – aquela mesma que me fazia ficar horas jogando videogame também guiou a minha carreira. Aos 11 anos, não foi surpresa começar a programar; meu primeiro jogo saiu como consequência dessa curiosidade gigante, um emaranhado de código que na época era um orgulho. 
-            <br /><br />
-            Hoje, com 5 anos de experiência desenvolvendo software, jogos e scripts, percebo que cada linha de código é uma oportunidade de transformar ideias em algo real. Lembro que, aos 17, no meio do ensino médio eu trabalhava com scripts para Excel no financeiro de uma empresa, o que me ensinou a importância de ter criatividade e praticidade - em pouquíssimo tempo.
-            <br /><br />
-            Por aqui tem alguns projetos que considero relevantes mas se quiser ver ainda mais, só dar uma olhada no meu <a href="https://github.com/Sakemo">Github.</a>
-            <br /><br />
-            <a href="https://api.whatsapp.com/send/?phone=5588981346909">Me chama</a> pra trocar uma ideia e transformar umas ideias em código.
-          </p>
-        </section>
-
-        <!-- Skills -->
-        <section id="skills" class="section">
-          <h2>Habilidades</h2>
-          <div class="skill-item">
-            <span class="skill-title">
-              <i class="fa-brands fa-html5"></i> HTML &amp; CSS
-            </span>
-            <div class="skill-bar">
-              <div class="skill-progress" style="width: 80%"></div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <span class="skill-title">
-              <i class="fa-brands fa-js"></i> JavaScript
-            </span>
-            <div class="skill-bar">
-              <div class="skill-progress" style="width: 90%"></div>
-            </div> 
-          </div>
-          <div class="skill-item">
-            <span class="skill-title">
-              <i class="fa-brands fa-python"></i> Python
-            </span>
-            <div class="skill-bar">
-              <div class="skill-progress" style="width: 95%"></div>
-            </div>
-          </div> 
-          <div class="skill-item">
-            <span class="skill-title">
-              <i class="fa-brands fa-react"></i> Outros
-            </span>
-            <div class="skill-bar">
-              <div class="skill-progress" style="width: 70%"></div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Projects (Simulação de slider infinito) -->
-        <section id="projects" class="section">
-          <h2>Projetos</h2>
-          <div class="project-slider">
-            <button class="slider-btn prev" onclick="prevSlide()">
-              <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <div class="slider-container">
-              <!-- Slide 1 -->
-              <div class="project-item active">
-                <h3>
-                  <i class="fa-brands fa-python"></i> Chopper - Verificação de Idade para Discord
-                </h3>
-                <div class="video-wrapper">
-                  <video class="project-video" controls>
-                    <source src="assets/Chopper_bot.mp4" type="video/mp4" />
-                    Seu navegador não suporta vídeos.
-                  </video>
-                  <button class="expand-btn" onclick="openVideoModal('assets/Chopper_bot.mp4')">
-                    <i class="fa-solid fa-expand"></i>
-                  </button>
-                </div>
-                <p>
-                  Um bot eficiente e seguro para automatizar a verificação de idade em servidores Discord, garantindo um ambiente protegido e organizado.
-                </p>
-                <ul>
-                  <li>✔️ Verificação automática de usuários</li>
-                  <li>✔️ Proteção contra menores de idade</li>
-                  <li>✔️ Registro opcional de aniversários</li>
-                </ul>
-                <div class="project-buttons">
-                  <a href="https://discord.com/oauth2/authorize?client_id=1333034229914796115" target="_blank" class="demo-btn">
-                    <i class="fa-solid fa-play"></i> Demonstração
-                  </a>
-                  <a href="https://github.com/Sakemo/Age_Verification_Discord-Bot" target="_blank" class="github-btn">
-                    <i class="fab fa-github"></i> GitHub
-                  </a>
-                </div>
-              </div>
-              <!-- Slide 2 -->
-              <div class="project-item">
-                <h3>
-                  <i class="fa-brands fa-css3-alt"></i> Weather.com
-                </h3>
-                <div class="video-wrapper">
-                  <video class="project-video" controls>
-                    <source src="assets/wheater.mov" type="video/mp4" />
-                    Seu navegador não suporta vídeos.
-                  </video>
-                  <button class="expand-btn" onclick="openVideoModal('assets/wheater.mov')">
-                    <i class="fa-solid fa-expand"></i>
-                  </button>
-                </div>
-                <p>
-                  Aplicação interativa que apresenta informações climáticas em tempo real com uma interface animada e intuitiva.
-                </p>
-                <ul>
-                  <li>✔️ Temperatura em graus Celsius</li>
-                  <li>✔️ Ícones animados para condições do tempo</li>
-                  <li>✔️ Fundo dinâmico e gradiente animado</li>
-                  <li>✔️ Detalhes sobre umidade e velocidade do vento</li>
-                </ul>
-                <div class="project-buttons">
-                  <a href="https://sakemo.github.io/previsao-tempo/" target="_blank" class="demo-btn">
-                    <i class="fa-solid fa-play"></i> Demonstração
-                  </a>
-                  <a href="https://github.com/Sakemo/previsao-tempo/tree/main?tab=readme-ov-file" target="_blank" class="github-btn">
-                    <i class="fab fa-github"></i> GitHub
-                  </a>
-                </div>
-              </div>
-              <!-- Slide 3 -->
-              <div class="project-item">
-                <h3>
-                  <i class="fa-brands fa-python"></i> Gerador de QR Code
-                </h3>
-                <div class="video-wrapper">
-                  <video class="project-video" controls>
-                    <source src="assets/Qr_CODE.mov" type="video/mp4" />
-                    Seu navegador não suporta vídeos.
-                  </video>
-                  <button class="expand-btn" onclick="openVideoModal('assets/Qr_CODE.mov')">
-                    <i class="fa-solid fa-expand"></i>
-                  </button>
-                </div>
-                <p>
-                  Ferramenta versátil para criar, personalizar e gerenciar QR Codes, ideal para empresas e eventos que buscam inovação e segurança.
-                </p>
-                <ul>
-                  <li>✔️ Geração e personalização de QR Codes</li>
-                  <li>✔️ Histórico de códigos gerados</li>
-                  <li>✔️ Criptografia integrada para proteção de dados</li>
-                  <li>✔️ Temas personalizáveis para uma interface moderna</li>
-                </ul>
-                <div class="project-buttons">
-                  <a href="#" target="_blank" class="demo-btn">
-                    <i class="fa-solid fa-play"></i> Demonstração
-                  </a>
-                  <a href="https://github.com/Sakemo/QR_Code_Py" target="_blank" class="github-btn">
-                    <i class="fab fa-github"></i> GitHub
-                  </a>
-                </div>
-              </div>
-              <!-- Slide 4 -->
-              <div class="project-item">
-                <h3>
-                  <i class="fa-brands fa-js"></i> Tetris.js
-                </h3>
-                <div class="video-wrapper">
-                  <video class="project-video" controls>
-                    <source src="assets/tetris.mp4" type="video/mp4" />
-                    Seu navegador não suporta vídeos.
-                  </video>
-                  <button class="expand-btn" onclick="openVideoModal('assets/tetris.mp4')">
-                    <i class="fa-solid fa-expand"></i>
-                  </button>
-                </div>
-                <p>
-                  Uma releitura moderna do clássico Tetris, desenvolvida com HTML, CSS e JavaScript para oferecer uma experiência de jogo dinâmica e envolvente.
-                </p>
-                <ul>
-                  <li>✔️ Controles intuitivos via teclado</li>
-                  <li>✔️ Sistema de pontuação dinâmico</li>
-                  <li>✔️ Aceleração progressiva e desafios crescentes</li>
-                  <li>✔️ Efeitos visuais responsivos e animados</li>
-                  <li>✔️ Detecção de game over com reinício rápido</li>
-                </ul>
-                <div class="project-buttons">
-                  <a href="https://sakemo.github.io/tetris-js/" target="_blank" class="demo-btn">
-                    <i class="fa-solid fa-play"></i> Demonstração
-                  </a>
-                  <a href="https://github.com/Sakemo/tetris-js" target="_blank" class="github-btn">
-                    <i class="fab fa-github"></i> GitHub
-                  </a>
-                </div>
-              </div>
-              <!-- Slide 5 -->
-              <div class="project-item">
-                <h3>
-                  <i class="fa-brands fa-python"></i> [BETA PROJECT] FLICK: Controle de Vendas e Gestão Empresarial
-                </h3>
-                <div class="video-wrapper">
-                  <video class="project-video" controls>
-                    <source src="assets/flick_final.mp4" type="video/mp4" />
-                    Seu navegador não suporta vídeos.
-                  </video>
-                  <button class="expand-btn" onclick="openVideoModal('assets/flick_final.mp4')">
-                    <i class="fa-solid fa-expand"></i>
-                  </button>
-                </div>
-                <p>
-                  Aplicação robusta em Python para gerenciamento completo de vendas e controle financeiro, oferecendo dashboards intuitivos e relatórios detalhados.
-                </p>
-                <ul>
-                  <li>✔️ Registro rápido de vendas, produtos e clientes</li>
-                  <li>✔️ Dashboard financeiro com métricas diárias, mensais e anuais</li>
-                  <li>✔️ Relatórios completos com gráficos e análises detalhadas</li>
-                  <li>✔️ Interface profissional e intuitiva para gestão empresarial</li>
-                </ul>
-                <div class="project-buttons">
-                  <!-- Link de demonstração indisponível: href="#" -->
-                  <a href="#" target="_blank" class="demo-btn">
-                    <i class="fa-solid fa-play"></i> Demonstração
-                  </a>
-                  <a href="https://github.com/Sakemo/auto-finance" target="_blank" class="github-btn">
-                    <i class="fab fa-github"></i> GitHub
-                  </a>
-                </div>
-              </div>
-              <!-- Slide 6 -->
-              <div class="project-item">
-                <h3>
-                  <i class="fa-brands fa-js"></i> Gerenciador de Senhas
-                </h3>
-                <div class="video-wrapper">
-                  <video class="project-video" controls>
-                    <source src="assets/password.mp4" type="video/mp4" />
-                    Seu navegador não suporta vídeos.
-                  </video>
-                  <button class="expand-btn" onclick="openVideoModal('assets/password.mp4')">
-                    <i class="fa-solid fa-expand"></i>
-                  </button>
-                </div>
-                <p>
-                  Aplicação prática para gerenciamento de senhas fortes e personalizadas, garantindo segurança digital para ambientes profissionais e pessoais.
-                </p>
-                <ul>
-                  <li>✔️ Geração de senhas seguras e aleatórias</li>
-                  <li>✔️ Opções de customização de caracteres e comprimento</li>
-                  <li>✔️ Interface simples e intuitiva</li>
-                  <li>✔️ Suporte para múltiplos níveis de segurança</li>
-                </ul>
-                <div class="project-buttons">
-                  <a href="https://sakemo.github.io/password-generator-js/" target="_blank" class="demo-btn">
-                    <i class="fa-solid fa-play"></i> Demonstração
-                  </a>
-                  <a href="https://github.com/Sakemo/password-generator-js" target="_blank" class="github-btn">
-                    <i class="fab fa-github"></i> GitHub
-                  </a>
-                </div>
-              </div>
-              <!-- Slide 7 -->
-              <div class="project-item">
-                <h3>
-                  <i class="fa-solid fa-gamepad"></i> Game: Devil Seeds 
-                </h3>
-                <div class="video-wrapper">
-                  <video class="project-video" controls>
-                    <source src="assets/devil_seeds.mov" type="video/mp4" />
-                    Seu navegador não suporta vídeos.
-                  </video>
-                  <button class="expand-btn" onclick="openVideoModal('assets/devil_seeds.mov')">
-                    <i class="fa-solid fa-expand"></i>
-                  </button>
-                </div>
-                <p>
-                  Projeto em conjunto com <a href="https://www.youtube.com/@OnlyTrevaz">Trevaz</a>. Fui responsável pela programação do jogo.
-                </p>
-                <ul>
-                  <li>✔️ Sistema de diário e anotações</li>
-                  <li>✔️ Jogabilidade dinâmica com habilidades real-time para puzzles</li>
-                  <li>✔️ Sistema de salvar e encontrar arquivos no menu</li>
-                  <li>✔️ Mecânicas de combate por turno</li>
-                </ul>
-                <div class="project-buttons">
-                  <a href="https://store.steampowered.com/app/2594560/Devil_Seeds/" target="_blank" class="demo-btn">
-                    <i class="fa-solid fa-play"></i> Demonstração
-                  </a>
-                  <a href="#" target="_blank" class="github-btn">
-                    <i class="fab fa-github"></i> GitHub
-                  </a>
-                </div>
-              </div>
-              <!-- Slide 8 -->
-              <div class="project-item">
-                <h3>
-                  <i class="fa-brands fa-js"></i> Calculator.js
-                </h3>
-                <div class="video-wrapper">
-                  <video class="project-video" controls>
-                    <source src="assets/calc.mp4" type="video/mp4" />
-                    Seu navegador não suporta vídeos.
-                  </video>
-                  <button class="expand-btn" onclick="openVideoModal('assets/calc.mp4')">
-                    <i class="fa-solid fa-expand"></i>
-                  </button>
-                </div>
-                <p>
-                  Uma calculadora completa e versátil, desenvolvida para atender desde operações básicas até funções matemáticas avançadas, garantindo precisão e praticidade em seus cálculos.
-                </p>
-                <ul>
-                  <li>✔️ <strong>Operações Básicas:</strong> Adições, subtrações, multiplicações e divisões com facilidade.</li>
-                  <li>✔️ <strong>Operações Avançadas:</strong> Funções como raiz quadrada, exponenciação, logaritmos e muito mais.</li>
-                  <li>✔️ <strong>Trigonometria:</strong> Cálculos com seno, cosseno e tangente, em radianos ou graus.</li>
-                  <li>✔️ <strong>Memória:</strong> Registro da última resposta calculada para facilitar operações subsequentes.</li>
-                </ul>
-                <div class="project-buttons">
-                  <a href="https://sakemo.github.io/calculator-js/" target="_blank" class="demo-btn">
-                    <i class="fa-solid fa-play"></i> Demonstração
-                  </a>
-                  <a href="https://github.com/Sakemo/calculator-js" target="_blank" class="github-btn">
-                    <i class="fab fa-github"></i> GitHub
-                  </a>
-                </div>
-              </div>              
-            </div>
-            <button class="slider-btn next" onclick="nextSlide()">
-              <i class="fa-solid fa-chevron-right"></i>
-            </button>
-          </div>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact" class="section">
-          <h2>Contato</h2>
-          <p>Entre em contato pelos seguintes meios:</p>
-          <div class="contact-cards">
-            <div class="contact-card">
-              <i class="fas fa-envelope"></i>
-              <h3>Email</h3>
-              <a href="mailto:sketlen308@gmail.com">sketlen308@gmail.com</a>
-            </div>
-            <div class="contact-card">
-              <i class="fas fa-phone"></i>
-              <h3>Telefone</h3>
-              <a href="https://api.whatsapp.com/send/?phone=5588981346909" target="_blank">88981346909</a>
-            </div>
-            <div class="contact-card">
-              <i class="fab fa-discord"></i>
-              <h3>Discord</h3>
-              <p>king_hailmarx</p>
-            </div>
-          </div>
-        </section>
-
-      </main>
-    </div>
-
-    <!-- Modal de Vídeo -->
-    <div id="video-modal" class="video-modal" onclick="closeVideoModal(event)">
-      <div class="modal-content" onclick="event.stopPropagation()">
-        <!-- O vídeo será inserido aqui dinamicamente -->
+<body>
+  <div class="container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="profile-card">
+        <img src="assets/Profile picture 2.png" alt="Avatar" class="avatar" />
+        <h1 class="profile-name">Alex K.</h1>
+        <p class="profile-role">Desenvolvedor de Software</p>
+        <!-- Link para GitHub -->
+        <a href="https://github.com/Sakemo" target="_blank" class="github-link">
+          <i class="fab fa-github"></i> GitHub
+        </a>
       </div>
-    </div>
 
-    <script src="script.js"></script>
-    <!-- Script para validar o botão de demonstração -->
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const demoButtons = document.querySelectorAll('.demo-btn');
-        demoButtons.forEach(button => {
-          button.addEventListener('click', function(e) {
-            const demoLink = button.getAttribute('href');
-            // Se o link estiver vazio ou for apenas "#", exibe um alerta
-            if (!demoLink || demoLink.trim() === '' || demoLink === '#') {
-              e.preventDefault();
-              alert('Demonstração indisponível para este projeto.');
-            }
-          });
+      <!-- Botão de alternância de modo (claro/escuro) -->
+      <div class="mode-toggle-container">
+        <button id="mode-toggle" onclick="toggleMode()">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li class="active" onclick="showSection('about', this)">
+            <i class="fa-solid fa-user"></i> Sobre
+          </li>
+          <li onclick="showSection('skills', this)">
+            <i class="fa-solid fa-code"></i> Habilidades
+          </li>
+          <li onclick="showSection('projects', this)">
+            <i class="fa-solid fa-briefcase"></i> Projetos
+          </li>
+          <li onclick="showSection('contact', this)">
+            <i class="fa-solid fa-envelope"></i> Contato
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="content-area">
+      <!-- About -->
+      <section id="about" class="section active">
+        <h2>Sobre</h2>
+        <p>
+          Opa, eu sou o Alex!<br /><br />
+          E desde sempre, a tecnologia foi minha paixão – aquela mesma que me fazia ficar horas jogando videogame também
+          guiou a minha carreira. Aos 11 anos, não foi surpresa começar a programar; meu primeiro jogo saiu como
+          consequência dessa curiosidade gigante, um emaranhado de código que na época era um orgulho.<br /><br />
+          Hoje, com 5 anos de experiência desenvolvendo software, jogos e scripts, percebo que cada linha de código é
+          uma oportunidade de transformar ideias em algo real. Lembro que, aos 17, no meio do ensino médio eu trabalhava
+          com scripts para Excel no financeiro de uma empresa, o que me ensinou a importância de ter criatividade e
+          praticidade - em pouquíssimo tempo.<br /><br />
+          Por aqui tem alguns projetos que considero relevantes mas se quiser ver ainda mais, só dar uma olhada no meu
+          <a href="https://github.com/Sakemo">Github.</a><br /><br />
+          <a href="https://api.whatsapp.com/send/?phone=5588981346909">Me chama</a> pra trocar uma ideia e transformar
+          umas ideias em código.
+        </p>
+      </section>
+
+      <!-- Skills -->
+<!-- Skills -->
+<section id="skills" class="section">
+  <h2>Habilidades</h2>
+
+  <div class="skill-item">
+    <span class="skill-title"><i class="fa-brands fa-html5"></i> HTML & CSS</span>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 90%"></div>
+    </div>
+  </div>
+
+  <div class="skill-item">
+    <span class="skill-title"><i class="fa-brands fa-js"></i> JavaScript</span>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 90%"></div>
+    </div>
+  </div>
+
+  <div class="skill-item">
+    <span class="skill-title"><i class="fa-brands fa-react"></i> React.js</span>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 85%"></div>
+    </div>
+  </div>
+
+  <div class="skill-item">
+    <span class="skill-title"><i class="fa-brands fa-node"></i> Node.js</span>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 75%"></div>
+    </div>
+  </div>
+
+  <div class="skill-item">
+    <span class="skill-title"><i class="fa-brands fa-python"></i> Python & Frameworks (Django, Flask, Pygame)</span>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 95%"></div>
+    </div>
+  </div>
+
+  <div class="skill-item">
+    <span class="skill-title"><i class="fa-solid fa-database"></i> Banco de Dados (SQL & NoSQL)</span>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 80%"></div>
+    </div>
+  </div>
+
+  <div class="skill-item">
+    <span class="skill-title"><i class="fa-solid fa-palette"></i> Design Gráfico (Photoshop, UI/UX)</span>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 90%"></div>
+    </div>
+  </div>
+
+<!-- Soft Skills -->
+<h3>Soft Skills</h3>
+<div class="soft-skills-container">
+
+  <div class="soft-skill">
+    <i class="fa-solid fa-lightbulb"></i>
+    <h4>Pensamento Criativo</h4>
+    <p>Transformo ideias abstratas em visuais impactantes e soluções inovadoras.</p>
+  </div>
+
+  <div class="soft-skill">
+    <i class="fa-solid fa-puzzle-piece"></i>
+    <h4>Resolução de Problemas</h4>
+    <p>Encontro soluções eficientes e práticas para desafios técnicos e criativos.</p>
+  </div>
+
+  <div class="soft-skill">
+    <i class="fa-solid fa-bolt"></i>
+    <h4>Adaptabilidade</h4>
+    <p>Aprendo novas tecnologias rapidamente e me movo bem entre design, código e storytelling.</p>
+  </div>
+
+  <div class="soft-skill">
+    <i class="fa-solid fa-comments"></i>
+    <h4>Comunicação</h4>
+    <p>Explico conceitos técnicos e criativos de forma clara, facilitando a colaboração.</p>
+  </div>
+
+  <div class="soft-skill">
+    <i class="fa-solid fa-clock"></i>
+    <h4>Gerenciamento de Tempo</h4>
+    <p>Equilibro múltiplos projetos com eficiência sem perder qualidade.</p>
+  </div>
+
+  <div class="soft-skill">
+    <i class="fa-solid fa-users"></i>
+    <h4>Trabalho em Equipe</h4>
+    <p>Colaboro bem em projetos, trazendo um olhar técnico e criativo para as soluções.</p>
+  </div>
+
+</div>
+
+</section>
+
+
+      <!-- Projects -->
+      <section id="projects" class="section">
+        <h2>Projetos</h2>
+        <!-- Carrega os projetos via iframe -->
+        <iframe src="projects.html" frameborder="0" style="width: 100%; height: 700px; border-radius: 10px;"></iframe>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section">
+        <h2>Contato</h2>
+        <p>Entre em contato pelos seguintes meios:</p>
+        <div class="contact-cards">
+          <div class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <a href="mailto:sketlen308@gmail.com">sketlen308@gmail.com</a>
+          </div>
+          <div class="contact-card">
+            <i class="fas fa-phone"></i>
+            <h3>Telefone</h3>
+            <a href="https://api.whatsapp.com/send/?phone=5588981346909" target="_blank">88981346909</a>
+          </div>
+          <div class="contact-card">
+            <i class="fab fa-discord"></i>
+            <h3>Discord</h3>
+            <p>king_hailmarx</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal de Vídeo -->
+  <div id="video-modal" class="video-modal" onclick="closeVideoModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <!-- O vídeo será inserido aqui dinamicamente -->
+    </div>
+  </div>
+
+  <!-- Modal Ler Mais -->
+  <div id="read-more-modal" class="read-more-modal" onclick="closeReadMoreModal()">
+    <div class="modal-content" onclick="event.stopPropagation()"></div>
+  </div>
+
+  <script src="script.js"></script>
+  <!-- Script para validar o botão de demonstração -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const demoButtons = document.querySelectorAll('.demo-btn');
+      demoButtons.forEach(button => {
+        button.addEventListener('click', function (e) {
+          const demoLink = button.getAttribute('href');
+          if (!demoLink || demoLink.trim() === '' || demoLink === '#') {
+            e.preventDefault();
+            alert('Demonstração indisponível para este projeto.');
+          }
         });
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>

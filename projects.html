@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projetos - Alex Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome para ícones -->
+    <script src="https://kit.fontawesome.com/1f26dd467f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Container de Projetos em Grid -->
+    <div class="projects-container">
+
+        <!-- Card: Code Tracking -->
+        <div class="project-card" data-project-id="code-tracking">
+            <video class="project-preview" muted loop playsinline>
+                <source src="assets/code-tracking.mp4" type="video/mp4" />
+                Seu navegador não suporta vídeos.
+            </video>
+            <div class="project-card-info">
+                <h3><i class="fa-brands fa-node"></i> Code Tracking</h3>
+                <p>O Code Tracking é a ferramenta definitiva para desenvolvedores que querem manter um histórico
+                    consistente de commits no GitHub...</p>
+            </div>
+        </div>
+
+        <!-- Card: Chopper - Verificação de Idade para Discord -->
+        <div class="project-card" data-project-id="chopper">
+            <video class="project-preview" muted loop playsinline>
+                <source src="assets/chopper_v2.mp4" type="video/mp4" />
+                Seu navegador não suporta vídeos.
+            </video>
+            <div class="project-card-info">
+                <h3><i class="fa-brands fa-discord"></i> Chopper</h3>
+                <p>Um bot eficiente e seguro para automatizar a verificação de idade em servidores Discord, garantindo
+                    um ambiente protegido...</p>
+            </div>
+        </div>
+
+        <!-- Card: Weather.com -->
+        <div class="project-card" data-project-id="weather">
+            <video class="project-preview" muted loop playsinline>
+                <source src="assets/wheater.mov" type="video/mp4" />
+                Seu navegador não suporta vídeos.
+            </video>
+            <div class="project-card-info">
+                <h3><i class="fa-brands fa-css3-alt"></i> Weather.com</h3>
+                <p>Aplicação interativa que apresenta informações climáticas em tempo real com uma interface animada e
+                    intuitiva...</p>
+            </div>
+        </div>
+
+        <!-- Card: Gerador de QR Code -->
+        <div class="project-card" data-project-id="qr-code">
+            <video class="project-preview" muted loop playsinline>
+                <source src="assets/Qr_CODE.mov" type="video/mp4" />
+                Seu navegador não suporta vídeos.
+            </video>
+            <div class="project-card-info">
+                <h3><i class="fa-brands fa-python"></i> Gerador de QR Code</h3>
+                <p>Ferramenta versátil para criar, personalizar e gerenciar QR Codes, ideal para empresas e eventos que
+                    buscam inovação...</p>
+            </div>
+        </div>
+
+        <!-- Card: Tetris.js -->
+        <div class="project-card" data-project-id="tetris">
+            <video class="project-preview" muted loop playsinline>
+                <source src="assets/tetris.mp4" type="video/mp4" />
+                Seu navegador não suporta vídeos.
+            </video>
+            <div class="project-card-info">
+                <h3><i class="fa-brands fa-js"></i> Tetris.js</h3>
+                <p>Uma releitura moderna do clássico Tetris, desenvolvida com HTML, CSS e JavaScript para oferecer uma
+                    experiência dinâmica...</p>
+            </div>
+        </div>
+
+        <!-- Card: [BETA PROJECT] FLICK -->
+        <div class="project-card" data-project-id="flick">
+            <video class="project-preview" muted loop playsinline>
+                <source src="assets/flick.mov" type="video/mp4" />
+                Seu navegador não suporta vídeos.
+            </video>
+            <div class="project-card-info">
+                <h3><i class="fa-brands fa-python"></i> [BETA PROJECT] FLICK</h3>
+                <p>Aplicação robusta em Python para gerenciamento completo de vendas e controle financeiro, com
+                    dashboards intuitivos...</p>
+            </div>
+        </div>
+
+        <!-- Card: Gerenciador de Senhas -->
+        <div class="project-card" data-project-id="password">
+            <video class="project-preview" muted loop playsinline>
+                <source src="assets/password.mp4" type="video/mp4" />
+                Seu navegador não suporta vídeos.
+            </video>
+            <div class="project-card-info">
+                <h3><i class="fa-brands fa-js"></i> Gerenciador de Senhas</h3>
+                <p>Aplicação prática para gerenciamento de senhas fortes e personalizadas, garantindo segurança digital
+                    para ambientes...</p>
+            </div>
+        </div>
+
+        <!-- Card: Game: Devil Seeds -->
+        <div class="project-card" data-project-id="devil-seeds">
+            <video class="project-preview" muted loop playsinline>
+                <source src="assets/devil_seeds.mov" type="video/mp4" />
+                Seu navegador não suporta vídeos.
+            </video>
+            <div class="project-card-info">
+                <h3><i class="fa-solid fa-gamepad"></i> Game: Devil Seeds</h3>
+                <p>Projeto em conjunto com <a href="https://www.youtube.com/@OnlyTrevaz" target="_blank">Trevaz</a>. Fui
+                    responsável pela programação do jogo...</p>
+            </div>
+        </div>
+
+        <!-- Card: Calculator.js -->
+        <div class="project-card" data-project-id="calculator">
+            <video class="project-preview" muted loop playsinline>
+                <source src="assets/calc.mp4" type="video/mp4" />
+                Seu navegador não suporta vídeos.
+            </video>
+            <div class="project-card-info">
+                <h3><i class="fa-brands fa-js"></i> Calculator.js</h3>
+                <p>Uma calculadora completa e versátil, desenvolvida para operações básicas e funções matemáticas
+                    avançadas...</p>
+            </div>
+        </div>
+
+    </div>
+
+<!-- Modal de Projeto -->
+<div id="project-modal" class="project-modal" role="dialog" aria-modal="true">
+    <div class="modal-content">
+        <!-- Cabeçalho do Modal com título e botão de fechar -->
+        <div class="modal-header">
+            <h2 class="modal-title"></h2>
+            <button class="modal-close" onclick="closeProjectModal()" aria-label="Fechar modal">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="modal-body">
+            <!-- Vídeo do Projeto -->
+            <div class="modal-video-wrapper">
+                <video class="modal-video" controls autoplay>
+                    <source src="" type="video/mp4" />
+                    Seu navegador não suporta vídeos.
+                </video>
+            </div>
+            <!-- Seção de ícones e botões (abaixo do vídeo e acima do Markdown) -->
+            <div class="modal-icons-buttons">
+                <!-- Ícones de Tecnologias -->
+                            <div class="modal-tech">
+                                <!-- Os ícones serão preenchidos via JavaScript -->
+                            </div>
+                <!-- Botões com ícones -->
+                <div class="modal-buttons">
+
+                    <a href="#" target="_blank" class="btn-project">
+                        <i class="fas fa-external-link-alt"></i> Ver Projeto
+                    </a>
+                    <a href="#" target="_blank" class="btn-github">
+                        <i class="fab fa-github"></i> Ver GitHub
+                    </a>
+                </div>
+            </div>
+            <!-- Conteúdo Markdown -->
+            <div class="modal-markdown">
+                <!-- Conteúdo convertido de Markdown -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+    // Configura o marked para interpretar quebras de linha
+    marked.setOptions({
+        breaks: true
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const projectCards = document.querySelectorAll(".project-card");
+        const modal = document.getElementById("project-modal");
+        const modalTitle = modal.querySelector(".modal-title");
+        const modalVideo = modal.querySelector(".modal-video source");
+        const modalMarkdown = modal.querySelector(".modal-markdown");
+        const btnProject = modal.querySelector(".btn-project");
+        const btnGithub = modal.querySelector(".btn-github");
+
+        // Função para abrir o modal com os dados do projeto
+        async function openProjectModal(projectId) {
+            const project = projetos[projectId];
+
+            if (!project) return;
+
+            modalTitle.textContent = project.titulo;
+            modalVideo.src = project.video;
+            btnProject.href = project.linkProjeto;
+            btnGithub.href = project.linkGithub;
+
+            // Carregar Markdown
+            try {
+                const response = await fetch(`projects/${project.markdown}`);
+                if (!response.ok) throw new Error("Erro ao carregar Markdown");
+
+                const markdownText = await response.text();
+                modalMarkdown.innerHTML = marked.parse(markdownText);
+            } catch (error) {
+                modalMarkdown.innerHTML = "<p>Erro ao carregar a descrição do projeto.</p>";
+            }
+
+            // Atualizar o vídeo e exibir o modal
+            modal.querySelector(".modal-video").load();
+            modal.style.display = "flex";
+        }
+
+        // Adiciona evento de clique nos cards de projeto
+        projectCards.forEach(card => {
+            card.addEventListener("click", () => {
+                const projectId = card.getAttribute("data-project-id");
+                openProjectModal(projectId);
+            });
+        });
+
+        // Fechar modal
+        function closeProjectModal() {
+            modal.style.display = "none";
+        }
+        document.querySelector(".modal-close").addEventListener("click", closeProjectModal);
+    });
+</script>
+
+<script>
+    /* Dicionário com os dados dos projetos */
+    const projetos = {
+        "code-tracking": {
+            titulo: "Code Tracking",
+            markdown: "code-tracking.md", // arquivo em projects/code-tracking.md
+            video: "assets/code-tracking.mp4",
+            tecnologias: [
+                { icone: "fa-brands fa-node", nome: "Node.js" },
+                { icone: "fa-brands fa-js", nome: "JavaScript" },
+                { icone: "fa-solid fa-database", nome: "MongoDB" }
+            ],
+            linkProjeto: "https://marketplace.visualstudio.com/items?itemName=kingdevstudio.auto-code-tracking",
+            linkGithub: "https://github.com/Sakemo/code-tracking"
+        },
+        "chopper": {
+            titulo: "Chopper",
+            markdown: "chopper.md",
+            video: "assets/chopper_v2.mp4",
+            tecnologias: [
+                { icone: "fa-brands fa-python", nome: "Python" },
+                { icone: "fa-brands fa-discord", nome: "Discord API" }
+            ],
+            linkProjeto: "https://exemplo.com/chopper",
+            linkGithub: "https://github.com/Sakemo/Age_Verification_Discord-Bot"
+        },
+        "weather": {
+            titulo: "Weather.com",
+            markdown: "weather.md",
+            video: "assets/wheater.mov",
+            tecnologias: [
+                { icone: "fa-brands fa-css3-alt", nome: "CSS3" },
+                { icone: "fa-brands fa-js", nome: "JavaScript" },
+                { icone: "fa-brands fa-html5", nome:
+                    "HTML" }
+            ],
+            linkProjeto: "https://sakemo.github.io/previsao-tempo/",
+            linkGithub: "https://github.com/Sakemo/previsao-tempo"
+        },
+        "qr-code": {
+            titulo: "QR Code Py",
+            markdown: "qr_code.md",
+            video: "assets/Qr_CODE.mov",
+            tecnologias: [
+                { icone: "fa-brands fa-python", nome: "Python" }
+            ],
+            linkProjeto: "https://sakemo.github.io/previsao-tempo/",
+            linkGithub: "https://github.com/Sakemo/previsao-tempo"
+        },
+        "tetris": {
+            titulo: "Tetris",
+            markdown: "tetris.md",
+            video: "assets/tetris.mp4",
+            tecnologias: [
+                { icone: "fa-brands fa-css3-alt", nome: "CSS3" },
+                { icone: "fa-brands fa-js", nome: "JavaScript" },
+                {
+                    icone: "fa-brands fa-html5", nome:
+                        "HTML"
+                }            ],
+            linkProjeto: "https://sakemo.github.io/previsao-tempo/",
+            linkGithub: "https://github.com/Sakemo/previsao-tempo"
+    }, 
+    "flick": {
+            titulo: "Flick",
+            markdown: "flick.md",
+            video: "assets/flick.mov",
+            tecnologias: [
+                { icone: "fa-brands fa-python", nome: "Python" },
+            ]
+                ,
+            linkProjeto: "https://sakemo.github.io/previsao-tempo/",
+            linkGithub: "https://github.com/Sakemo/previsao-tempo"
+        },
+                "password": {
+            titulo: "Gerenciador de Senhas",
+            markdown: "password.md",
+            video: "assets/password.mp4",
+            tecnologias: [
+                { icone: "fa-brands fa-css3-alt", nome: "CSS3" },
+                { icone: "fa-brands fa-js", nome: "JavaScript" },
+                {
+                    icone: "fa-brands fa-html5", nome:
+                        "HTML"
+                }],
+            linkProjeto: "https://sakemo.github.io/previsao-tempo/",
+            linkGithub: "https://github.com/Sakemo/previsao-tempo"
+        },
+        "devil-seeds":{
+            titulo: "Devil Seeds",
+            markdown: "devilseeds.md",
+            video: "assets/devil_seeds.mov",
+            tecnologias: [
+                { icone: "fa-brands fa-node-js" }
+            ],
+            linkProjeto: "#", linkGithub: "#"
+        },
+        "calculator": {
+            titulo: "Calculadora",
+            markdown: "calculator.md",
+            video: "assets/calc.mp4",
+            tecnologias: [
+                { icone: "fa-brands fa-css3-alt" },
+                { icone: "fa-brands fa-js" },
+                { icone: 'fa-brands fa-html5' }
+            ],
+            linkProjeto: "#", linkGithub: "#"
+
+        }
+
+}
+
+    // Função para abrir o modal do projeto
+    function openProjectModal(projectId) {
+        const projeto = projetos[projectId];
+        if (!projeto) return;
+
+        const modal = document.getElementById("project-modal");
+        const modalTitle = modal.querySelector(".modal-title");
+        const modalVideoSource = modal.querySelector(".modal-video source");
+        const modalVideo = modal.querySelector(".modal-video");
+        const modalMarkdown = modal.querySelector(".modal-markdown");
+        const modalTech = modal.querySelector(".modal-tech");
+        const btnProjeto = modal.querySelector(".btn-project");
+        const btnGithub = modal.querySelector(".btn-github");
+
+        // Preenche título e vídeo
+        modalTitle.innerText = projeto.titulo;
+        modalVideoSource.src = projeto.video;
+        modalVideo.load();
+
+        // Preenche os links
+        btnProjeto.href = projeto.linkProjeto;
+        btnGithub.href = projeto.linkGithub;
+
+        // Carrega o arquivo Markdown do projeto (pasta projects/)
+        fetch("projects/" + projeto.markdown)
+            .then(response => response.text())
+            .then(text => {
+                // Se desejar converter markdown para HTML, utilize uma biblioteca como marked.js
+                // Exemplo: modalMarkdown.innerHTML = marked.parse(text);
+                modalMarkdown.innerHTML = text;
+            })
+            .catch(err => {
+                modalMarkdown.innerHTML = "Erro ao carregar o conteúdo.";
+                console.error("Erro ao carregar markdown:", err);
+            });
+
+        // Preenche os ícones de tecnologias
+        modalTech.innerHTML = "";
+        projeto.tecnologias.forEach(tec => {
+            const span = document.createElement("span");
+            span.className = "tech-icon";
+            span.title = tec.nome;
+            // Adiciona um span separado para o nome com a classe "tech-name"
+            span.innerHTML = `<i class="${tec.icone}"></i> <span class="tech-name">${tec.nome}</span>`;
+            modalTech.appendChild(span);
+        });
+
+
+        // Exibe o modal
+        modal.style.display = "flex";
+    }
+
+    // Fecha o modal
+    function closeProjectModal() {
+        document.getElementById("project-modal").style.display = "none";
+    }
+
+    // Adiciona event listener aos cards
+    document.querySelectorAll(".project-card").forEach(card => {
+        card.addEventListener("click", () => {
+            const projectId = card.getAttribute("data-project-id");
+            openProjectModal(projectId);
+        });
+    });
+
+    // Fecha o modal ao clicar fora do conteúdo
+    document.getElementById("project-modal").addEventListener("click", (e) => {
+        if (e.target.id === "project-modal") {
+            closeProjectModal();
+        }
+    });
+</script>
+</body>
+
+</html>
+    <script src="script.js"></script>
+</body>
+
+</html>

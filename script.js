@@ -4,15 +4,15 @@
 function showSection(sectionId, element) {
   // Remove a classe 'active' dos itens do menu e ativa o selecionado
   const menuItems = document.querySelectorAll(".nav-menu li");
-  menuItems.forEach(item => item.classList.remove("active"));
+  menuItems.forEach((item) => item.classList.remove("active"));
   element.classList.add("active");
 
   // Seleciona todas as seções e o container da área de conteúdo
   const sections = document.querySelectorAll(".section");
   const contentArea = document.querySelector(".content-area");
-  
+
   let newSection;
-  sections.forEach(sec => {
+  sections.forEach((sec) => {
     if (sec.id === sectionId) {
       sec.classList.add("active");
       newSection = sec;
@@ -46,7 +46,7 @@ function showSection(sectionId, element) {
 // Anima as barras de progresso na seção Skills
 function animateSkills() {
   const progressBars = document.querySelectorAll(".skill-progress");
-  progressBars.forEach(bar => {
+  progressBars.forEach((bar) => {
     const targetWidth = bar.style.width;
     bar.style.width = "0%";
     setTimeout(() => {
@@ -113,3 +113,92 @@ function closeVideoModal(event) {
   const modal = document.getElementById("video-modal");
   modal.style.display = "none";
 }
+// Exemplo de dados dos projetos
+const projetos = {
+  1: {
+    titulo: "Projeto 1",
+    descricao:
+      "## Descrição\nEste projeto é sobre criação de uma aplicação web com foco em performance e usabilidade. *Tecnologias: HTML, CSS, JS*",
+    video: "caminho/para/video1.mp4",
+    linkProjeto: "https://exemplo.com/projeto1",
+    linkGithub: "https://github.com/seuusuario/projeto1",
+  },
+  2: {
+    titulo: "Projeto 2",
+    descricao:
+      "## Descrição\nProjeto focado em soluções mobile com design responsivo e backend robusto.",
+    video: "caminho/para/video2.mp4",
+    linkProjeto: "https://exemplo.com/projeto2",
+    linkGithub: "https://github.com/seuusuario/projeto2",
+  },
+  // Adicione outros projetos conforme necessário...
+};
+
+// Função para abrir o modal de projeto
+function openProjectModal(projectId) {
+  const projeto = projetos[projectId];
+  if (!projeto) return;
+
+  const modal = document.getElementById("project-modal");
+  const modalBody = modal.querySelector(".modal-body");
+
+  // Limpa o conteúdo anterior
+  modalBody.innerHTML = "";
+
+  // Cria elemento para markdown (para simplificar, aqui inserimos o HTML resultante; idealmente, use uma biblioteca de markdown para HTML)
+  const markdownContainer = document.createElement("div");
+  markdownContainer.className = "modal-markdown";
+  markdownContainer.innerHTML = projeto.descricao; // se desejar converter markdown para HTML, integre uma biblioteca como marked.js
+
+  // Cria o vídeo
+  const videoElem = document.createElement("video");
+  videoElem.src = projeto.video;
+  videoElem.controls = true;
+  videoElem.autoplay = true;
+
+  // Cria os botões
+  const btnContainer = document.createElement("div");
+  btnContainer.className = "modal-buttons";
+
+  const projetoBtn = document.createElement("a");
+  projetoBtn.href = projeto.linkProjeto;
+  projetoBtn.target = "_blank";
+  projetoBtn.innerText = "Ver Projeto";
+
+  const githubBtn = document.createElement("a");
+  githubBtn.href = projeto.linkGithub;
+  githubBtn.target = "_blank";
+  githubBtn.innerText = "Ver GitHub";
+
+  btnContainer.appendChild(projetoBtn);
+  btnContainer.appendChild(githubBtn);
+
+  // Adiciona os elementos ao modal
+  modalBody.appendChild(markdownContainer);
+  modalBody.appendChild(videoElem);
+  modalBody.appendChild(btnContainer);
+
+  // Exibe o modal
+  modal.style.display = "flex";
+}
+
+// Função para fechar o modal de projeto
+function closeProjectModal() {
+  const modal = document.getElementById("project-modal");
+  modal.style.display = "none";
+}
+
+// Event listener para os cards de projeto
+document.querySelectorAll(".project-card").forEach((card) => {
+  card.addEventListener("click", () => {
+    const projectId = card.getAttribute("data-project-id");
+    openProjectModal(projectId);
+  });
+});
+
+// Opcional: fechar o modal ao clicar fora do conteúdo
+document.getElementById("project-modal").addEventListener("click", (e) => {
+  if (e.target.id === "project-modal") {
+    closeProjectModal();
+  }
+});
