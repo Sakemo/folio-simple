@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificados - Alex Portfolio</title>
+    <!-- Font Awesome para ícones -->
+    <script src="https://kit.fontawesome.com/1f26dd467f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Estilos específicos para a página de certificados */
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+        }
+
+        .certificates-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .certificate-card {
+            background-color: var(--card-bg);
+            border: var(--border-style);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .certificate-card a {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .certificate-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-bottom: var(--border-style);
+        }
+
+        .certificate-card h3 {
+            margin: 15px 0 5px;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .certificate-card p {
+            font-size: 0.9rem;
+            color: var(--muted-color);
+            margin-bottom: 10px;
+        }
+
+        img{
+            border-radius: 5px; border: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="certificates-container">
+        <!-- Certificado 1 -->
+        <div class="certificate-card">
+            <a href="certificates/logica-de-programação.pdf" download>
+                <img src="assets/courses/logica-de-programacao-danki.jpg" alt="Certificado de Lógica de Programação" />
+                <h3><i class="fa-solid fa-code"></i> Lógica de Programação</h3>
+                <p>30/03/23</p>
+            </a>
+        </div>
+        <!-- Certificado 2 -->
+        <div class="certificate-card">
+            <a href="certificates/javascript.pdf" download>
+                <img src="assets/courses/javascript-danki.jpg" alt="Certificado de JavaScript" />
+                <h3><i class="fa-brands fa-js"></i> JavaScript</h3>
+                <p>29/03/23</p>
+            </a>
+        </div>
+        <!-- Certificado 3 -->
+        <div class="certificate-card">
+            <a href="certificates/data_sci.pdf" download>
+                <img src="assets/courses/data_sci.jpeg" alt="Certificado de Ciência de Dados" />
+                <h3><i class="fa-solid fa-server"></i> Ciência de Dados </h3>
+                <p>15/08/23</p>
+            </a>
+        </div>
+        <!-- Adicione mais cards conforme necessário -->
+        <div class="certificate-card">
+            <a href="certificates/python.pdf" download>
+                <img src="assets/courses/python-danki.jpg" alt="Certificado de Python" />
+                <h3><i class="fa-brands fa-python"></i>  Python </h3>
+                <p>15/08/23</p>
+            </a>
+        </div>
+
+        <div class="certificate-card">
+            <a href="certificates/data-back.pdf" download >
+                <img src="assets/courses/data_bank.jpg" alt="Certificado de Banco de dados" />
+                <h3><i class="fa-solid fa-database"></i> Banco de Dados </h3>
+                <p>15/08/23</p>
+            </a>
+        </div>
+
+        <div class="certificate-card">
+            <a href="certificates/front-end.pdf" download>
+                <img src="assets/courses/front-end.jpg" alt="Certificado de Front-End" />
+                <h3><i class="fa-brands fa-html5"></i> Front-End </h3>
+                <p>15/08/23</p>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html

@@ -39,12 +39,19 @@
           <li onclick="showSection('skills', this)">
             <i class="fa-solid fa-code"></i> Habilidades
           </li>
+
           <li onclick="showSection('projects', this)">
             <i class="fa-solid fa-briefcase"></i> Projetos
           </li>
+          <li onclick="showSection('courses', this)">
+            <i class="fa-solid fa-medal"></i> Certificados
+          </li> <!--Falta esse-->
           <li onclick="showSection('contact', this)">
             <i class="fa-solid fa-envelope"></i> Contato
           </li>
+          <li onclick="showSection('updates', this)">
+            <i class="fa-solid fa-code-branch"></i> Atualizações
+          </li> <!--Falta esse-->
         </ul>
       </nav>
     </aside>
@@ -53,7 +60,10 @@
     <main class="content-area">
       <!-- About -->
       <section id="about" class="section active">
-        <h2>Sobre</h2>
+        <h2 style="display: flex; justify-content: space-between;">Sobre
+          <a href="#" id="cv_download"> <i class="fa-solid fa-download" style="padding: 0px 5px 0;"></i> Baixe Meu
+            CV</a>
+        </h2>
         <p>
           Opa, eu sou o Alex!<br /><br />
           E desde sempre, a tecnologia foi minha paixão – aquela mesma que me fazia ficar horas jogando videogame também
@@ -68,107 +78,138 @@
           <a href="https://api.whatsapp.com/send/?phone=5588981346909">Me chama</a> pra trocar uma ideia e transformar
           umas ideias em código.
         </p>
+
+        <div class="cards-container">
+          <div class="card">
+            <i class="fa-solid fa-code"></i>
+            <h3>+5 Anos de Experiência</h3>
+            <p>Programando, criando soluções únicas</p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-computer"></i>
+            <h3>Software Developer</h3>
+            <p>Transformando ideias em código</p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-globe"></i>
+            <h3>Full-Stack Developer</h3>
+            <p>Criando sites para todo tipo de ideia</p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-gamepad"></i>
+            <h3>Game DEV</h3>
+            <p>Apaixonado por jogos, desenvolvendo jogos</p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-brush"></i>
+            <h3>UI/UX Designer</h3>
+            <p>Experiências imersivas em qualquer projeto</p>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-school"></i>
+            <h3>Profissional Certificado</h3>
+            <p>Cursos em diversas linguagens de programação/p>
+          </div>
+        </div>
       </section>
 
       <!-- Skills -->
-<!-- Skills -->
-<section id="skills" class="section">
-  <h2>Habilidades</h2>
+      <section id="skills" class="section">
+        <h2>Habilidades</h2>
 
-  <div class="skill-item">
-    <span class="skill-title"><i class="fa-brands fa-html5"></i> HTML & CSS</span>
-    <div class="skill-bar">
-      <div class="skill-progress" style="width: 90%"></div>
-    </div>
-  </div>
+        <div class="skill-item">
+          <span class="skill-title"><i class="fa-brands fa-html5"></i> HTML & CSS</span>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 90%"></div>
+          </div>
+        </div>
 
-  <div class="skill-item">
-    <span class="skill-title"><i class="fa-brands fa-js"></i> JavaScript</span>
-    <div class="skill-bar">
-      <div class="skill-progress" style="width: 90%"></div>
-    </div>
-  </div>
+        <div class="skill-item">
+          <span class="skill-title"><i class="fa-brands fa-js"></i> JavaScript</span>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 90%"></div>
+          </div>
+        </div>
 
-  <div class="skill-item">
-    <span class="skill-title"><i class="fa-brands fa-react"></i> React.js</span>
-    <div class="skill-bar">
-      <div class="skill-progress" style="width: 85%"></div>
-    </div>
-  </div>
+        <div class="skill-item">
+          <span class="skill-title"><i class="fa-brands fa-react"></i> React.js</span>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 85%"></div>
+          </div>
+        </div>
 
-  <div class="skill-item">
-    <span class="skill-title"><i class="fa-brands fa-node"></i> Node.js</span>
-    <div class="skill-bar">
-      <div class="skill-progress" style="width: 75%"></div>
-    </div>
-  </div>
+        <div class="skill-item">
+          <span class="skill-title"><i class="fa-brands fa-node"></i> Node.js</span>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 75%"></div>
+          </div>
+        </div>
 
-  <div class="skill-item">
-    <span class="skill-title"><i class="fa-brands fa-python"></i> Python & Frameworks (Django, Flask, Pygame)</span>
-    <div class="skill-bar">
-      <div class="skill-progress" style="width: 95%"></div>
-    </div>
-  </div>
+        <div class="skill-item">
+          <span class="skill-title"><i class="fa-brands fa-python"></i> Python & Frameworks (Django, Flask,
+            Pygame)</span>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 95%"></div>
+          </div>
+        </div>
 
-  <div class="skill-item">
-    <span class="skill-title"><i class="fa-solid fa-database"></i> Banco de Dados (SQL & NoSQL)</span>
-    <div class="skill-bar">
-      <div class="skill-progress" style="width: 80%"></div>
-    </div>
-  </div>
+        <div class="skill-item">
+          <span class="skill-title"><i class="fa-solid fa-database"></i> Banco de Dados (SQL & NoSQL)</span>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 80%"></div>
+          </div>
+        </div>
 
-  <div class="skill-item">
-    <span class="skill-title"><i class="fa-solid fa-palette"></i> Design Gráfico (Photoshop, UI/UX)</span>
-    <div class="skill-bar">
-      <div class="skill-progress" style="width: 90%"></div>
-    </div>
-  </div>
+        <div class="skill-item">
+          <span class="skill-title"><i class="fa-solid fa-palette"></i> Design Gráfico (Photoshop, UI/UX)</span>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 90%"></div>
+          </div>
+        </div>
 
-<!-- Soft Skills -->
-<h3>Soft Skills</h3>
-<div class="soft-skills-container">
+        <!-- Soft Skills -->
+        <h3>Soft Skills</h3>
+        <div class="soft-skills-container">
 
-  <div class="soft-skill">
-    <i class="fa-solid fa-lightbulb"></i>
-    <h4>Pensamento Criativo</h4>
-    <p>Transformo ideias abstratas em visuais impactantes e soluções inovadoras.</p>
-  </div>
+          <div class="soft-skill">
+            <i class="fa-solid fa-lightbulb"></i>
+            <h4>Pensamento Criativo</h4>
+            <p>Transformo ideias abstratas em visuais impactantes e soluções inovadoras.</p>
+          </div>
 
-  <div class="soft-skill">
-    <i class="fa-solid fa-puzzle-piece"></i>
-    <h4>Resolução de Problemas</h4>
-    <p>Encontro soluções eficientes e práticas para desafios técnicos e criativos.</p>
-  </div>
+          <div class="soft-skill">
+            <i class="fa-solid fa-puzzle-piece"></i>
+            <h4>Resolução de Problemas</h4>
+            <p>Encontro soluções eficientes e práticas para desafios técnicos e criativos.</p>
+          </div>
 
-  <div class="soft-skill">
-    <i class="fa-solid fa-bolt"></i>
-    <h4>Adaptabilidade</h4>
-    <p>Aprendo novas tecnologias rapidamente e me movo bem entre design, código e storytelling.</p>
-  </div>
+          <div class="soft-skill">
+            <i class="fa-solid fa-bolt"></i>
+            <h4>Adaptabilidade</h4>
+            <p>Aprendo novas tecnologias rapidamente e me movo bem entre design, código e storytelling.</p>
+          </div>
 
-  <div class="soft-skill">
-    <i class="fa-solid fa-comments"></i>
-    <h4>Comunicação</h4>
-    <p>Explico conceitos técnicos e criativos de forma clara, facilitando a colaboração.</p>
-  </div>
+          <div class="soft-skill">
+            <i class="fa-solid fa-comments"></i>
+            <h4>Comunicação</h4>
+            <p>Explico conceitos técnicos e criativos de forma clara, facilitando a colaboração.</p>
+          </div>
 
-  <div class="soft-skill">
-    <i class="fa-solid fa-clock"></i>
-    <h4>Gerenciamento de Tempo</h4>
-    <p>Equilibro múltiplos projetos com eficiência sem perder qualidade.</p>
-  </div>
+          <div class="soft-skill">
+            <i class="fa-solid fa-clock"></i>
+            <h4>Gerenciamento de Tempo</h4>
+            <p>Equilibro múltiplos projetos com eficiência sem perder qualidade.</p>
+          </div>
 
-  <div class="soft-skill">
-    <i class="fa-solid fa-users"></i>
-    <h4>Trabalho em Equipe</h4>
-    <p>Colaboro bem em projetos, trazendo um olhar técnico e criativo para as soluções.</p>
-  </div>
+          <div class="soft-skill">
+            <i class="fa-solid fa-users"></i>
+            <h4>Trabalho em Equipe</h4>
+            <p>Colaboro bem em projetos, trazendo um olhar técnico e criativo para as soluções.</p>
+          </div>
 
-</div>
+        </div>
 
-</section>
-
-
+      </section>
       <!-- Projects -->
       <section id="projects" class="section">
         <h2>Projetos</h2>
@@ -176,7 +217,13 @@
         <iframe src="projects.html" frameborder="0" style="width: 100%; height: 700px; border-radius: 10px;"></iframe>
       </section>
 
-      <!-- Contact -->
+      <section id="courses" class="section">
+        <h2>Certificados</h2>
+        <iframe src="certificates.html" style="width: 100%; height: 700px; border-radius: 10px;" frameborder="0"></iframe>
+      </section>
+
+    
+      <!-- Contact -->   
       <section id="contact" class="section">
         <h2>Contato</h2>
         <p>Entre em contato pelos seguintes meios:</p>

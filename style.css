@@ -24,7 +24,7 @@ body.light-mode {
   --sidebar-bg: #e8e8e8;
   --text-color: #333;
   --muted-color: #777;
-  --accent-color: #d35400;
+  --accent-color: #d30000;
 }
 
 /* ================================
@@ -644,4 +644,62 @@ body {
 .modal-tech .tech-name {
   font-size: 9px;
   color: gray;
+}
+
+#cv_download{
+  display: flex;
+    padding: 10px 20px;
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    font-size: 16px;
+    background: transparent;
+    color: var(--accent-color);
+}
+
+#cv_download:hover{
+  background-color: var(--accent-color);
+  color: var(--text-color);
+}
+
+.cards-container {
+  margin: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: var(--gradient-start);
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 25px var(--shadow);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 13px var(--accent-color);
+}
+
+.icon {
+  font-size: 40px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-top: 10px;
+  color: var(--text-color);
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--muted-color);
 }
