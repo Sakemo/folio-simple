@@ -64,7 +64,6 @@ a:hover {
 /* ================================
    Container Principal
 ================================ */
-/* Container Principal Atualizado */
 .container {
   display: flex;
   background-color: var(--card-bg);
@@ -475,8 +474,7 @@ body {
 
 /* ================================
    Projetos - Grid de Cards
-======================= ========= */
-/* Dentro da seção de projetos */
+================================ */
 .projects-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -586,7 +584,7 @@ body {
 }
 
 /* Cards de Tecnologias */
-.modal-icons-buttons{
+.modal-icons-buttons {
   margin: 10px 0;
   display: flex;
   justify-content: space-between;
@@ -646,20 +644,20 @@ body {
   color: gray;
 }
 
-#cv_download{
+#cv_download {
   display: flex;
-    padding: 10px 20px;
-    border: 1px solid var(--accent-color);
-    border-radius: 10px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s ease-in-out;
-    font-size: 16px;
-    background: transparent;
-    color: var(--accent-color);
+  padding: 10px 20px;
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  font-size: 16px;
+  background: transparent;
+  color: var(--accent-color);
 }
 
-#cv_download:hover{
+#cv_download:hover {
   background-color: var(--accent-color);
   color: var(--text-color);
 }
@@ -702,4 +700,54 @@ body {
 .card p {
   font-size: 14px;
   color: var(--muted-color);
+}
+
+/* ================================
+   Responsividade para Celulares
+================================ */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 95vw;
+    height: auto;
+  }
+
+  .sidebar {
+    flex: 0 0 auto;
+    width: 100%;
+    border-right: none;
+    border-bottom: var(--border-style);
+    padding: 15px;
+  }
+
+  .content-area {
+    padding: 15px;
+  }
+
+  .nav-menu li {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .profile-name {
+    font-size: 1.2rem;
+  }
+
+  .profile-role {
+    font-size: 0.85rem;
+  }
+
+  #cv_download {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .cards-container,
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    max-width: 90vw;
+  }
 }
