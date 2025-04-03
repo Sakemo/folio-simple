@@ -112,6 +112,22 @@
 </head>
 
 <body>
+    
+    <div class="blog-container">
+        <div class="blog-card" onclick="openModal('04042025')">
+            <div class="card-header">
+                <small>Sex, 04 Abr</small>
+            </div>
+            <div class="card-title">
+                <h3>WhatsCord</h3>
+            </div>
+            <div class="card-preview">
+                <p>Projeto de bot para vincular
+                    Discord - Whatsapp (Para uso pessoal)
+                </p>
+            </div>
+        </div>
+
     <div class="blog-container">
         <div class="blog-card" onclick="openModal('03042025')">
             <div class="card-header">
@@ -124,7 +140,6 @@
                 <p>Atualizações do Matchmaking. Praticamente pronto.</p>
             </div>
         </div>
-
 
         <div class="blog-card" onclick="openModal('31032025')">
             <div class="card-header">
@@ -751,6 +766,30 @@
             </p>
         </div>
     </div>
+
+    <div id="04042025" class="modal" onclick="closeModal(event, '04042025')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal(event, '04042025')">&times;</span>
+            <h2>WhatsCord</h2>
+            <p class="project-meta">Status: Planejamento | Tecnologias: Python, discord.py, SQLite</p>
+            <p>
+                A ideia é simples:
+                <br><br>
+                1. Inicializar o bot do Discord <br>
+                2. Conectar-se ao WhatsApp via API (ex: WhatsApp Web API) <br>
+                3. Criar um evento para capturar mensagens recebidas no WhatsApp <br>
+                - Quando uma mensagem for recebida, identificar o remetente e o conteúdo <br>
+                - Encaminhar a mensagem para o usuário no Discord via DM usando um embed <br>
+                4. Criar um comando para responder à mensagem do WhatsApp <br>
+                - O usuário do Discord pode usar um comando de resposta <br>
+                - O bot então encaminha a resposta para o remetente no WhatsApp <br>
+                5. Criar logs de mensagens trocadas <br>
+                6. Configurar permissões e verificar se a conexão com WhatsApp está ativa <br>
+
+                <br>
+                <br>
+            </p>
+        </div>
 
     <div id="proj-flick" class="modal" onclick="closeModal(event, 'proj-flick')">
         <div class="modal-content" onclick="event.stopPropagation()">
