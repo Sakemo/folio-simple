@@ -52,6 +52,23 @@
             </div>
         </div>
 
+        <!-- Card: Matchmaker - Tinder Discord-->
+        <div class="project-card" data-project-id="matchmaker">
+            <video class="project-preview" muted loop playsinline>
+                <source src="assets/matchmaker.mp4" type="video/mp4" />
+                Seu navegador não suporta vídeos.
+            </video>
+            <div class="project-card-info">
+                <h3><i class="fa-brands fa-discord"></i> 
+                Matchmaker - Tinder Discord</h3>
+                <p>
+                    Bot de discord para matchmaking de usuarios em um mesmo servidor, se utilizando de perguntas/respostas e testes para
+                    melhor matchmaking. (Tinder Bot)
+                </p>
+            </div>
+        </div>
+
+
         <!-- Card: Tetris.js -->
         <div class="project-card" data-project-id="tetris">
             <video class="project-preview" muted loop playsinline>
@@ -220,6 +237,25 @@
     <script>
         /* Dicionário com os dados dos projetos */
         const projetos = {
+            "matchmaker": {
+                titulo: "Matchmaker",
+                markdown: "matchmaker.md",
+                video: "assets/matchmaker.mp4",
+                tecnologias: [{
+                    icone: "fa-solid fa-database",
+                    nome: "MySQL"
+                },
+                {
+                    icone: "fa-brands fa-python",
+                    nome: "Python"
+                },
+                {
+                    icone: "fa-brands fa-discord",
+                    nome: "discord.py"
+                }],
+                linkProjeto: "https://discord.com/oauth2/authorize?client_id=1335015453633941658",
+                linkGithub: "https://github.com/Sakemo/matchmake_bot"
+            },
             "code-tracking": {
                 titulo: "Code Tracking",
                 markdown: "code-tracking.md",

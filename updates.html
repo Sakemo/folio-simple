@@ -113,6 +113,19 @@
 
 <body>
     <div class="blog-container">
+        <div class="blog-card" onclick="openModal('03042025')">
+            <div class="card-header">
+                <small>Qui, 03 Abr</small>
+            </div>
+            <div class="card-title">
+                <h3>Tinder Bot Discord</h3>
+            </div>
+            <div class="card-preview">
+                <p>Atualizações do Matchmaking. Praticamente pronto.</p>
+            </div>
+        </div>
+
+
         <div class="blog-card" onclick="openModal('31032025')">
             <div class="card-header">
                 <small>Seg, 31 Mar</small>
@@ -995,6 +1008,57 @@
             </p>
         </div>
     </div>
+
+    <div id="03042025" class="modal" onclick="closeModal(event, '03042025')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal(event, '03042025')">&times;</span>
+            <h2>Tinder Bot Discord: Matchmaking no Caos</h2>
+            <p class="project-meta">Status: Em Beta</p>
+            <p>
+                <br>
+                Tudo começou com uma ideia simples: facilitar o matchmaking no servidor de ERP +18. A premissa? Um bot que cruzasse os
+                resultados do BDSMTest.org com os cargos do Discord para sugerir matches perfeitos. Simples na teoria, um caos na
+                prática.
+                <br><br>
+                <h3>Primeiros Passos: O Casamento Entre Código e Fetiches</h3>
+                <br>
+                A primeira decisão foi definir a estrutura do bot. Parti para o Discord.py (porque sou old school), configurei os
+                intents e comecei a brincar com o banco de dados. A ideia era armazenar os resultados do teste e criar um sistema de
+                compatibilidade baseado em porcentagens. Dom 100%? Vai encontrar um Sub 100%. Switch? Bom, a vida é cheia de escolhas.
+                <br><br>
+                Mas aí veio o primeiro problema: coletar os resultados do BDSMTest.org de um jeito intuitivo. Escolhi um modal
+                interativo para o input e armazenei tudo no banco de dados.
+                <br><br>
+                <h3>A Matemática do Tesão</h3>
+                <br>
+                Criar um sistema de matchmaking envolvia mais do que apenas comparar números. Precisava de uma fórmula que equilibrasse
+                a compatibilidade e evitasse que um Switch de 50% caísse no limbo dos "quase tudo, mas não tudo". A solução? Um cálculo
+                baseado na diferença entre os valores dominantes, dando prioridade a opostos complementares.
+                <br><br>
+                Tradução: se um Dom está buscando um Sub, a prioridade é alguém com submissão máxima. Mas se não houver um match
+                perfeito, ele pega o segundo melhor.
+                <br><br>
+                <h3>O Pior Inimigo: O OAuth2</h3>
+                <br>
+                Quando chegou a hora de adicionar o bot ao servidor, veio o drama: Discord bloqueando o link de convite. Debuguei,
+                revisei permissões, mexi no OAuth2. Nada. No fim, o problema era uma flag maldita no Developer Portal. Depois de
+                resolver isso, o bot finalmente entrou no servidor.
+                <br><br>
+                <h3>O Estado Atual: Quase Lá</h3>
+                <br>
+                Agora o bot já faz matchmaking funcional. Usuários podem rodar `/matchmake` e ele encontra um parceiro compatível
+                baseado nos dados armazenados. Ainda falta otimizar algumas respostas para que o bot pareça menos um algoritmo e mais um
+                wingman digital.
+                <br><br>
+                Próximos passos? Refinar os critérios de compatibilidade, adicionar opções de filtro e talvez até um sistema de
+                "curtidas" para deixar o negócio mais interativo. Afinal, até bots de ERP merecem um pouco de carinho.
+                <br><br>
+                Fique de olho para as próximas atualizações!
+
+            </p>
+        </div>
+    </div>
+
 
     <div id="proj-bot-yandere" class="modal" onclick="closeModal(event, 'proj-bot-yandere')">
         <div class="modal-content" onclick="event.stopPropagation()">
