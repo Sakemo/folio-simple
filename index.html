@@ -17,7 +17,7 @@
       <div class="profile-card">
         <img src="assets/Profile picture 2.png" alt="Avatar" class="avatar" />
         <h1 class="profile-name">Alex K.</h1>
-        <p class="profile-role">Desenvolvedor de Software</p>
+        <p class="profile-role">Software Developer</p>
         <!-- Link para GitHub -->
         <a href="https://github.com/Sakemo" target="_blank" class="github-link">
           <i class="fab fa-github"></i> GitHub
@@ -36,6 +36,7 @@
           <li class="active" onclick="showSection('about', this)">
             <i class="fa-solid fa-user"></i> Sobre
           </li>
+
           <li onclick="showSection('skills', this)">
             <i class="fa-solid fa-code"></i> Habilidades
           </li>
@@ -43,15 +44,27 @@
           <li onclick="showSection('projects', this)">
             <i class="fa-solid fa-briefcase"></i> Projetos
           </li>
+
+          <li onclick="showSection('services', this)">
+            <i class="fa-solid fa-bell-concierge"></i>
+            Serviços
+          </li>
+
           <li onclick="showSection('courses', this)">
             <i class="fa-solid fa-medal"></i> Certificados
-          </li> <!--Falta esse-->
+          </li>
+          
           <li onclick="showSection('contact', this)">
             <i class="fa-solid fa-envelope"></i> Contato
           </li>
+
           <li onclick="showSection('updates', this)">
             <i class="fa-solid fa-code-branch"></i> Atualizações
-          </li> <!--Falta esse-->
+          </li> 
+
+          <li onclick="showSection('reviews', this)">
+            <i class="fa-solid fa-star"></i> Reviews
+          </li>
         </ul>
       </nav>
     </aside>
@@ -65,17 +78,11 @@
             CV</a>
         </h2> 
         <p>
-          <h3>Opa, eu sou o Alex</h3 style="margin:0px;" <br /><br />
-          E desde sempre, a tecnologia foi minha paixão – aquela mesma que me fazia ficar horas jogando videogame também
-          guiou a minha carreira. Aos 11 anos, não foi surpresa começar a programar; meu primeiro jogo saiu como
-          consequência dessa curiosidade gigante, um emaranhado de código que na época era um orgulho.<br /><br />
-          Hoje, com 5 anos de experiência desenvolvendo software, jogos e scripts, percebo que cada linha de código é
-          uma oportunidade de transformar ideias em algo real. Lembro que, aos 17, no meio do ensino médio eu trabalhava
-          com scripts para Excel no financeiro de uma empresa, o que me ensinou a importância de ter criatividade e
-          praticidade - em pouquíssimo tempo.<br /><br />
+          <h3>Opa, eu sou a Alex</h3 style="margin:0px;" <br /><br />
+         Desde cedo, tecnologia é meu combustível — dos jogos na infância ao meu primeiro game programado aos 11 anos. Com 5 anos de experiência desenvolvendo software, jogos e automações, vejo cada linha de código como um jeito de dar vida a ideias. Aos 17, criei scripts em Excel para otimizar processos no financeiro de uma empresa, onde entendi na prática o valor da criatividade e eficiência.<br /><br />
           Por aqui tem alguns projetos que considero relevantes mas se quiser ver ainda mais, só dar uma olhada no meu
           <a href="https://github.com/Sakemo">Github.</a><br /><br />
-          <a href="https://api.whatsapp.com/send/?phone=5588981346909">Quer transformar suas ideias em código?</a>Me chama pra criar algo foda juntos.
+          <a href="https://api.whatsapp.com/send/?phone=5588981346909">Quer transformar suas ideias em código?</a> Me chama pra criar algo foda juntos.
         </p>
 
         <div class="cards-container">
@@ -97,7 +104,7 @@
           <div class="card">
             <i class="fa-solid fa-gamepad"></i>
             <h3>Game DEV</h3>
-            <p>Apaixonado por jogos, desenvolvendo jogos</p>
+            <p>Apaixonada por jogos, desenvolvendo jogos</p>
           </div>
           <div class="card">
             <i class="fa-solid fa-brush"></i>
@@ -106,107 +113,149 @@
           </div>
           <div class="card">
             <i class="fa-solid fa-school"></i>
-            <h3>Profissional Certificado</h3>
-            <p>Cursos em diversas linguagens de programação</p>
+            <h3>Ciêntista da Computação</h3>
+            <p>Em andamento | Bacharelado | Estacio</p>
           </div>
         </div>
       </section>
 
-      <!-- Skills -->
-      <section id="skills" class="section">
-        <h2>Habilidades</h2>
+<!-- Skills -->
+<section id="skills" class="section">
+  <h2>Habilidades</h2>
 
-        <div class="skill-item">
-          <span class="skill-title"><i class="fa-brands fa-html5"></i> HTML & CSS</span>
-          <div class="skill-bar">
-            <div class="skill-progress" style="width: 90%"></div>
-          </div>
-        </div>
+  <!-- Cloud & DevOps -->
+  <div class="skill-item">
+    <span class="skill-title"><i class="fa-brands fa-docker"></i> Docker & Kubernetes</span>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 80%"></div>
+    </div>
+  </div>
 
-        <div class="skill-item">
-          <span class="skill-title"><i class="fa-brands fa-js"></i> JavaScript</span>
-          <div class="skill-bar">
-            <div class="skill-progress" style="width: 90%"></div>
-          </div>
-        </div>
+  <div class="skill-item">
+    <span class="skill-title"><i class="fa-solid fa-cogs"></i> CI/CD (GitLab) & DevOps</span>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 85%"></div>
+    </div>
+  </div>
 
-        <div class="skill-item">
-          <span class="skill-title"><i class="fa-brands fa-react"></i> React.js</span>
-          <div class="skill-bar">
-            <div class="skill-progress" style="width: 85%"></div>
-          </div>
-        </div>
+  <div class="skill-item">
+    <span class="skill-title"><i class="fa-solid fa-chart-line"></i> Prometheus, Grafana & OpenTelemetry</span>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 75%"></div>
+    </div>
+  </div>
 
-        <div class="skill-item">
-          <span class="skill-title"><i class="fa-brands fa-node"></i> Node.js</span>
-          <div class="skill-bar">
-            <div class="skill-progress" style="width: 75%"></div>
-          </div>
-        </div>
+  <!-- Mensageria -->
+  <div class="skill-item">
+    <span class="skill-title"><i class="fa-solid fa-paper-plane"></i> RabbitMQ & Kafka </span>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 70%"></div>
+    </div>
+  </div>
 
-        <div class="skill-item">
-          <span class="skill-title"><i class="fa-brands fa-python"></i> Python & Frameworks (Django, Flask,
-            Pygame)</span>
-          <div class="skill-bar">
-            <div class="skill-progress" style="width: 95%"></div>
-          </div>
-        </div>
+  <!-- Back-End -->
+  <div class="skill-item">
+    <span class="skill-title"><i class="fa-brands fa-python"></i> Python </span>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 95%"></div>
+    </div>
+  </div>
 
-        <div class="skill-item">
-          <span class="skill-title"><i class="fa-solid fa-database"></i> Banco de Dados (SQL & NoSQL)</span>
-          <div class="skill-bar">
-            <div class="skill-progress" style="width: 80%"></div>
-          </div>
-        </div>
+  <div class="skill-item">
+    <span class="skill-title"><i class="fa-brands fa-java"></i> Java</span>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 60%"></div>
+    </div>
+  </div>
 
-        <div class="skill-item">
-          <span class="skill-title"><i class="fa-solid fa-palette"></i> Design Gráfico (Photoshop, UI/UX)</span>
-          <div class="skill-bar">
-            <div class="skill-progress" style="width: 90%"></div>
-          </div>
-        </div>
+  <!-- Front-End -->
+  <div class="skill-item">
+    <span class="skill-title"><i class="fa-brands fa-html5"></i> HTML & CSS</span>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 90%"></div>
+    </div>
+  </div>
 
-        <!-- Soft Skills -->
-        <h3>Soft Skills</h3>
-        <div class="soft-skills-container">
+  <div class="skill-item">
+    <span class="skill-title"><i class="fa-brands fa-js"></i> JavaScript</span>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 90%"></div>
+    </div>
+  </div>
+
+  <div class="skill-item">
+    <span class="skill-title"><i class="fa-brands fa-react"></i> React.js</span>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 85%"></div>
+    </div>
+  </div>
+
+  <!-- Banco de Dados -->
+  <div class="skill-item">
+    <span class="skill-title"><i class="fa-solid fa-database"></i> SQL & MongoDB</span>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 80%"></div>
+    </div>
+  </div>
+
+  <!-- Versionamento -->
+  <div class="skill-item">
+    <span class="skill-title"><i class="fa-brands fa-git-alt"></i> Git, GitHub & GitLab</span>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 90%"></div>
+    </div>
+  </div>
+
+  <!-- Design -->
+  <div class="skill-item">
+    <span class="skill-title"><i class="fa-solid fa-palette"></i> Design & UX </span>
+    <div class="skill-bar">
+      <div class="skill-progress" style="width: 95%"></div>
+    </div>
+  </div>
+
+  <!-- Soft Skills -->
+  <h3>Soft Skills</h3>
+  <div class="soft-skills-container">
 
           <div class="soft-skill">
             <i class="fa-solid fa-lightbulb"></i>
             <h4>Pensamento Criativo</h4>
             <p>Transformo ideias abstratas em visuais impactantes e soluções inovadoras.</p>
           </div>
-
+          
           <div class="soft-skill">
             <i class="fa-solid fa-puzzle-piece"></i>
             <h4>Resolução de Problemas</h4>
             <p>Encontro soluções eficientes e práticas para desafios técnicos e criativos.</p>
           </div>
-
+          
           <div class="soft-skill">
             <i class="fa-solid fa-bolt"></i>
             <h4>Adaptabilidade</h4>
             <p>Aprendo novas tecnologias rapidamente e me movo bem entre design, código e storytelling.</p>
           </div>
-
+          
           <div class="soft-skill">
             <i class="fa-solid fa-comments"></i>
             <h4>Comunicação</h4>
             <p>Explico conceitos técnicos e criativos de forma clara, facilitando a colaboração.</p>
           </div>
-
+          
           <div class="soft-skill">
             <i class="fa-solid fa-clock"></i>
             <h4>Gerenciamento de Tempo</h4>
             <p>Equilibro múltiplos projetos com eficiência sem perder qualidade.</p>
           </div>
-
+          
           <div class="soft-skill">
             <i class="fa-solid fa-users"></i>
             <h4>Trabalho em Equipe</h4>
             <p>Colaboro bem em projetos, trazendo um olhar técnico e criativo para as soluções.</p>
           </div>
+  </div>
+</section>
 
-        </div>
 
       </section>
       <!-- Projects -->
