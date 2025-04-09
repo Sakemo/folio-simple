@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>O Que Ando Fazendo - Alex Portfolio</title>
+    <title> </title>
     <script src="https://kit.fontawesome.com/1f26dd467f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
     <style>
-     
         body {
             background: var(--bg-color);
             color: var(--text-color);
@@ -38,9 +37,6 @@
             padding: 15px;
             cursor: pointer;
             transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
         }
 
         .blog-card:hover {
@@ -104,1156 +100,149 @@
             color: var(--muted-color);
             margin-bottom: 10px;
         }
-
-        .modal-content hr {
-            margin: 20px 0;
-        }
     </style>
 </head>
 
 <body>
-    
-    <div class="blog-container">
+    <!-- Container das publicações -->
+    <div id="blog-container" class="blog-container"></div>
 
-        <div class="blog-card" onclick="openModal('07042025')">
-            <div class="card-header">
-                <small>Seg, 07 Abr</small>
-            </div>
-            <div class="card-title">
-                <h3>Projeto TI simplificado</h3>
-            </div>
-            <div class="card-preview">
-                <p>
-                    Site em React baseado no funcionamento
-                    do Duolingo para um curso autoral de TI.
-                </p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('04042025')">
-            <div class="card-header">
-                <small>Sex, 04 Abr</small>
-            </div>
-            <div class="card-title">
-                <h3>WhatsCord</h3>
-            </div>
-            <div class="card-preview">
-                <p>Projeto de bot para vincular
-                    Discord - Whatsapp (Para uso pessoal)
-                </p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('03042025')">
-            <div class="card-header">
-                <small>Qui, 03 Abr</small>
-            </div>
-            <div class="card-title">
-                <h3>Tinder Bot Discord</h3>
-            </div>
-            <div class="card-preview">
-                <p>Atualizações do Matchmaking. Praticamente pronto.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('31032025')">
-            <div class="card-header">
-                <small>Seg, 31 Mar</small>
-            </div>
-            <div class="card-title">
-                <h3>Matchmaking Bot v0.1</h3>
-            </div>
-            <div class="card-preview">
-                <p>Primeiro rascunho de código do projeto</p>
-            </div>
-        </div>
-
-        <!-- Projeto 1: Chopper v2 -->
-        <div class="blog-card" onclick="openModal('artigo-chopper')">
-            <div class="card-header">
-                <small>Ter, 21 Mar</small>
-            </div>
-            <div class="card-title">
-                <h3>Chopper v2</h3>
-            </div>
-            <div class="card-preview">
-                <p>Evolução do bot autônomo com slash commands e novas funcionalidades. Clique para ver o planejamento
-                    completo.</p>
-            </div>
-        </div>
-
-        <!-- Projeto 2: Matchmaking Bot -->
-        <div class="blog-card" onclick="openModal('artigo-matchbot')">
-            <div class="card-header">
-                <small>Qua, 22 Mar</small>
-            </div>
-            <div class="card-title">
-                <h3>Matchmaking Bot</h3>
-            </div>
-            <div class="card-preview">
-                <p>Bot inovador para conectar pessoas em servidores +18. Confira detalhes do conceito e roadmap de
-                    desenvolvimento.</p>
-            </div>
-        </div>
-
-        <!-- Seção: King Labs - Projetos Principais -->
-        <div class="blog-card" onclick="openModal('proj-code-tracking')">
-            <div class="card-header">
-                <small>Status: BETA TEST</small>
-            </div>
-            <div class="card-title">
-                <h3>Code Tracking</h3>
-            </div>
-            <div class="card-preview">
-                <p>Extensão para rastrear programação com precisão. Saiba como resolver a discrepância entre commits e
-                    tempo real.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-pesquisa-chat')">
-            <div class="card-header">
-                <small>Status: Em Prototipagem</small>
-            </div>
-            <div class="card-title">
-                <h3>Pesquisa em Bate-Papo</h3>
-            </div>
-            <div class="card-preview">
-                <p>Ferramenta que localiza mensagens importantes em conversas antigas. Veja a proposta técnica e o fluxo
-                    de uso.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-artigos-cientificos')">
-            <div class="card-header">
-                <small>Status: Em Planejamento</small>
-            </div>
-            <div class="card-title">
-                <h3>App de Artigos Científicos</h3>
-            </div>
-            <div class="card-preview">
-                <p>Sistema de busca para facilitar o acesso a artigos acadêmicos relevantes. Detalhes sobre integrações
-                    e IA.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-unity-reddead-snes')">
-            <div class="card-header">
-                <small>Status: Desenvolvimento de Assets</small>
-            </div>
-            <div class="card-title">
-                <h3>Jogo Unity - Red Dead 2 para SNES</h3>
-            </div>
-            <div class="card-preview">
-                <p>Demake nostálgico do Red Dead Redemption 2 com visual em pixel art. Confira mecânicas e cronograma de
-                    produção.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-flick')">
-            <div class="card-header">
-                <small>Status: Desenvolvimento Inicial</small>
-            </div>
-            <div class="card-title">
-                <h3>Flick - Controle Financeiro</h3>
-            </div>
-            <div class="card-preview">
-                <p>Aplicativo para pequenas empresas gerenciarem vendas e despesas com facilidade. Explore o
-                    planejamento funcional.</p>
-            </div>
-        </div>
-
-        <!-- Seção: King Labs - Projetos em Planejamento -->
-        <div class="blog-card" onclick="openModal('proj-victoria-rose')">
-            <div class="card-header">
-                <small>Status: Em Ideação</small>
-            </div>
-            <div class="card-title">
-                <h3>Jogo "Victoria Rose"</h3>
-            </div>
-            <div class="card-preview">
-                <p>Projeto de jogo com temática única, buscando unir narrativa e mecânicas clássicas. Detalhes de enredo
-                    e design.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-kingplusplus')">
-            <div class="card-header">
-                <small>Status: Conceitual</small>
-            </div>
-            <div class="card-title">
-                <h3>Linguagem King++</h3>
-            </div>
-            <div class="card-preview">
-                <p>Desenvolvimento de uma linguagem de programação própria, com foco em simplicidade e performance.
-                    Conheça os conceitos iniciais.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-mugiwara')">
-            <div class="card-header">
-                <small>Status: Brainstorming</small>
-            </div>
-            <div class="card-title">
-                <h3>Mugiwara Project</h3>
-            </div>
-            <div class="card-preview">
-                <p>Projeto experimental com inspirações culturais e de design. Planejamento voltado para inovação visual
-                    e interatividade.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-ai-relacionamento')">
-            <div class="card-header">
-                <small>Status: Pesquisa Inicial</small>
-            </div>
-            <div class="card-title">
-                <h3>AI Girlfriend/Boyfriend</h3>
-            </div>
-            <div class="card-preview">
-                <p>Sistema de interação baseado em IA para relacionamentos virtuais, com ênfase em respostas
-                    personalizadas.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-discord-os')">
-            <div class="card-header">
-                <small>Status: Conceitual</small>
-            </div>
-            <div class="card-title">
-                <h3>Discord OS</h3>
-            </div>
-            <div class="card-preview">
-                <p>Um sistema operacional dedicado à integração com o Discord, buscando automação e customização
-                    extrema.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-smart-mirror')">
-            <div class="card-header">
-                <small>Status: Planejamento</small>
-            </div>
-            <div class="card-title">
-                <h3>Smart Mirror</h3>
-            </div>
-            <div class="card-preview">
-                <p>Espelho interativo que exibe informações personalizadas e integra IoT. Veja as etapas de prototipagem
-                    e design.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-finance-tracker')">
-            <div class="card-header">
-                <small>Status: Em Análise</small>
-            </div>
-            <div class="card-title">
-                <h3>Personal Finance Tracker (Bot)</h3>
-            </div>
-            <div class="card-preview">
-                <p>Bot voltado para o controle financeiro pessoal, com comandos inteligentes e integração com diversas
-                    APIs.</p>
-            </div>
-        </div>
-
-        <!-- Seção: King Labs - Projetos Experimentais e Estudos -->
-        <div class="blog-card" onclick="openModal('proj-neural-network')">
-            <div class="card-header">
-                <small>Status: Estudos Iniciais</small>
-            </div>
-            <div class="card-title">
-                <h3>Neural Network</h3>
-            </div>
-            <div class="card-preview">
-                <p>Projeto experimental para desenvolver redes neurais customizadas e explorar novas arquiteturas de IA.
-                </p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-chat-privacidade')">
-            <div class="card-header">
-                <small>Status: Prototipagem</small>
-            </div>
-            <div class="card-title">
-                <h3>Real-time Chat App para Privacidade</h3>
-            </div>
-            <div class="card-preview">
-                <p>Aplicativo de chat com foco em segurança e privacidade, utilizando criptografia ponta-a-ponta.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-gerenciador-senhas')">
-            <div class="card-header">
-                <small>Status: Em Pesquisa</small>
-            </div>
-            <div class="card-title">
-                <h3>Gerenciador de Senhas Offline</h3>
-            </div>
-            <div class="card-preview">
-                <p>Ferramenta para armazenar senhas de forma segura, sem conexão com a internet, garantindo privacidade
-                    máxima.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-kingdb')">
-            <div class="card-header">
-                <small>Status: Em Conceituação</small>
-            </div>
-            <div class="card-title">
-                <h3>KingDB</h3>
-            </div>
-            <div class="card-preview">
-                <p>Banco de dados próprio, otimizado para performance e integração com diversos sistemas internos.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-algorithm-visualizer')">
-            <div class="card-header">
-                <small>Status: Em Ideação</small>
-            </div>
-            <div class="card-title">
-                <h3>Algorithm Visualizer</h3>
-            </div>
-            <div class="card-preview">
-                <p>Ferramenta interativa para visualizar e entender algoritmos complexos por meio de simulações
-                    dinâmicas.</p>
-            </div>
-        </div>
-
-        <!-- Seção: King Labs - Projetos de Entretenimento/Fanmade -->
-        <div class="blog-card" onclick="openModal('proj-bot-comercial')">
-            <div class="card-header">
-                <small>Status: Em Desenvolvimento</small>
-            </div>
-            <div class="card-title">
-                <h3>Bot de Discord para Comercialização de Conteúdo</h3>
-            </div>
-            <div class="card-preview">
-                <p>Bot que facilita a venda e distribuição de conteúdos exclusivos em servidores de Discord.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-travel-booking')">
-            <div class="card-header">
-                <small>Status: Planejamento</small>
-            </div>
-            <div class="card-title">
-                <h3>Travel Booking System</h3>
-            </div>
-            <div class="card-preview">
-                <p>Sistema inovador para reserva de viagens, com interface intuitiva e suporte a múltiplos meios de
-                    pagamento.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-class09')">
-            <div class="card-header">
-                <small>Status: Conceitual</small>
-            </div>
-            <div class="card-title">
-                <h3>Class of '09 - Gayer Version</h3>
-            </div>
-            <div class="card-preview">
-                <p>Revisão divertida e criativa de um clássico, com mecânicas exclusivas e narrativa irreverente.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-yandere2d')">
-            <div class="card-header">
-                <small>Status: Em Design</small>
-            </div>
-            <div class="card-title">
-                <h3>Yandere Simulator 2D</h3>
-            </div>
-            <div class="card-preview">
-                <p>Adaptação 2D de um simulador cult, com foco em estética pixel art e mecânicas de stealth.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-lastofus2d')">
-            <div class="card-header">
-                <small>Status: Em Prototipagem</small>
-            </div>
-            <div class="card-title">
-                <h3>The Last of Us 2D</h3>
-            </div>
-            <div class="card-preview">
-                <p>Versão 2D inspirada no aclamado título, com narrativa adaptada e jogabilidade inovadora.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-noir-game')">
-            <div class="card-header">
-                <small>Status: Brainstorming</small>
-            </div>
-            <div class="card-title">
-                <h3>Noir Game</h3>
-            </div>
-            <div class="card-preview">
-                <p>Projeto de jogo com atmosfera noir, combinando mistério e desafios de lógica.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-bot-yandere')">
-            <div class="card-header">
-                <small>Status: Em Desenvolvimento</small>
-            </div>
-            <div class="card-title">
-                <h3>Bot de Discord Gaming para Yandere Simulator</h3>
-            </div>
-            <div class="card-preview">
-                <p>Bot dedicado a aprimorar a experiência de jogadores de Yandere Simulator através de comandos
-                    temáticos.</p>
-            </div>
-        </div>
-
-        <!-- Seção: King Labs - Projetos Práticos e Úteis -->
-        <div class="blog-card" onclick="openModal('proj-recipe-finder')">
-            <div class="card-header">
-                <small>Status: Em Ideação</small>
-            </div>
-            <div class="card-title">
-                <h3>Recipe Finder</h3>
-            </div>
-            <div class="card-preview">
-                <p>Aplicativo para descobrir receitas de forma prática, com sugestões baseadas em ingredientes
-                    disponíveis.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-bittorrent')">
-            <div class="card-header">
-                <small>Status: Em Pesquisa</small>
-            </div>
-            <div class="card-title">
-                <h3>Criar meu próprio BitTorrent</h3>
-            </div>
-            <div class="card-preview">
-                <p>Projeto técnico para desenvolver um protocolo P2P robusto e seguro. Conheça os desafios e soluções
-                    propostas.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-treinos')">
-            <div class="card-header">
-                <small>Status: Em Planejamento</small>
-            </div>
-            <div class="card-title">
-                <h3>Planejador de Treinos</h3>
-            </div>
-            <div class="card-preview">
-                <p>Ferramenta para personal trainers e entusiastas organizarem rotinas de exercícios com metas e
-                    métricas detalhadas.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-pomodoro')">
-            <div class="card-header">
-                <small>Status: Em Desenvolvimento</small>
-            </div>
-            <div class="card-title">
-                <h3>Pomodoro Timer</h3>
-            </div>
-            <div class="card-preview">
-                <p>Aplicativo para gerenciamento do tempo utilizando a técnica Pomodoro, com integração a notificações e
-                    estatísticas.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-code-editor')">
-            <div class="card-header">
-                <small>Status: Em Conceituação</small>
-            </div>
-            <div class="card-title">
-                <h3>Real-time Code Editor</h3>
-            </div>
-            <div class="card-preview">
-                <p>Editor de código colaborativo em tempo real, ideal para equipes de desenvolvimento com ferramentas
-                    integradas.</p>
-            </div>
-        </div>
-
-        <!-- Seção: King Labs - Gestão e Automação no Discord -->
-        <div class="blog-card" onclick="openModal('proj-webhooks')">
-            <div class="card-header">
-                <small>Status: Implementação Inicial</small>
-            </div>
-            <div class="card-title">
-                <h3>Webhooks</h3>
-            </div>
-            <div class="card-preview">
-                <p>Sistema de webhooks customizados para integração com serviços externos e automação de notificações.
-                </p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-painel-status')">
-            <div class="card-header">
-                <small>Status: Em Desenvolvimento</small>
-            </div>
-            <div class="card-title">
-                <h3>Painel de Status</h3>
-            </div>
-            <div class="card-preview">
-                <p>Dashboard interativo para monitoramento em tempo real de serviços e processos do servidor Discord.
-                </p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-comandos-personalizados')">
-            <div class="card-header">
-                <small>Status: Em Prototipagem</small>
-            </div>
-            <div class="card-title">
-                <h3>Comandos Personalizados</h3>
-            </div>
-            <div class="card-preview">
-                <p>Ferramenta para criar e gerenciar comandos customizados que potencializam a interação no Discord.</p>
-            </div>
-        </div>
-
-        <div class="blog-card" onclick="openModal('proj-sistema-recompensas')">
-            <div class="card-header">
-                <small>Status: Em Planejamento</small>
-            </div>
-            <div class="card-title">
-                <h3>Sistema de Recompensas</h3>
-            </div>
-            <div class="card-preview">
-                <p>Solução para incentivar a participação dos membros por meio de um sistema de pontos e prêmios
-                    integrados.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODAIS DOS PROJETOS -->
-    <div id="31032025" class="modal" onclick="closeModal(event, '31032025')">
+    <!-- Modal para exibir o conteúdo completo do post -->
+    <div id="post-modal" class="modal" onclick="closeModal(event)">
         <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, '31032025')">&times;</span>
-            <h2></h2>
-            <p class="project-meta">Data: Seg, 31 Mar | Status: Projeto</p>
-            <p>
-                <h1>Comecei a desenvolver um bot de matchmaking para ERP no Discord</h1>
-                <br><br>
-                Recentemente, comecei a trabalhar em um projeto que pode tornar a experiência de matchmaking em servidores de ERP no
-                Discord muito mais fluida e eficiente. A ideia é criar um bot que utilize um sistema de compatibilidade baseado nos
-                resultados do BDSMTest.org, cruzando esses dados com os cargos dos usuários no servidor.
-                <br><br>
-
-                <h3>Conceito</h3> <br>
-                A lógica principal do bot é simples: em vez de apenas combinar usuários com interesses semelhantes, ele prioriza opostos
-                complementares. Isso significa que um usuário com alta porcentagem em submissividade terá maior compatibilidade com
-                alguém altamente dominante, por exemplo. O sistema será estruturado em três etapas principais:
-                <br> <br>
-                Coleta e armazenamento dos dados
-                <br>
-                O bot receberá os resultados do BDSMTest.org por meio de um modal.
-                <br>
-                Esses dados serão armazenados junto com informações relevantes, como gênero, sexualidade e papel (Dom/Sub/Vanilla) no
-                servidor.
-                <br><br>
-                
-                <h3>Cálculo da compatibilidade</h3>
-                <br>
-                A fórmula de compatibilidade dará mais peso para combinações opostas ideais, enquanto outras combinações terão um escore
-                reduzido.
-                <br><br>
-                Exemplo de pontuação:
-                <br><br>
-                Dom/Sub → +100 pontos
-                <br>
-                Switch/Switch → +50 pontos
-                <br>
-                Vanilla/Vanilla → +30 pontos
-                <br>
-                Outras combinações → pontuação ajustada conforme a complementaridade.
-                <br><br>
-
-                <h3>Execução do matchmaking</h3>
-                <br>
-                O comando /matchmake buscará no banco de dados um usuário compatível que ainda esteja no servidor.
-                <br><br>
-                O bot calculará a compatibilidade e retornará a melhor combinação disponível.
-                <br><br>
-                O usuário encontrado será marcado no chat junto com uma ficha resumida de suas preferências.
-                <br><br>
-
-                <h4>Próximos Passos</h4>
-                <br>
-                No momento, estou estruturando o armazenamento dos dados e desenvolvendo a fórmula de pontuação. A implementação será
-                feita com Python e Discord.py/Nextcord para garantir um funcionamento eficiente dentro do servidor.
-                <br><br>
-                Esse projeto tem potencial para melhorar significativamente a interação dentro da comunidade e facilitar a conexão entre
-                usuários com interesses alinhados. Vou continuar atualizando o progresso conforme avanço no desenvolvimento!
-            </p>
-        </div>
-    </div>
-
-    <!-- Chopper v2 -->
-    <div id="artigo-chopper" class="modal" onclick="closeModal(event, 'artigo-chopper')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'artigo-chopper')">&times;</span>
-            <h2>Chopper v2</h2>
-            <p class="project-meta">Data: Ter, 21 Mar | Status: Em Evolução</p>
-            <p>
-                O projeto Chopper v2 representa a evolução do nosso drone autônomo, com uma reformulação completa no
-                sistema de controle e interação. Agora, incorporamos slash commands para facilitar o controle remoto e
-                adicionamos diversas melhorias que ampliam sua capacidade operacional, como integração com sensores de
-                última geração e módulos de comunicação otimizados. O planejamento inclui testes de campo, ajustes de
-                firmware e uma sessão comparativa com a versão anterior – tudo para garantir performance e
-                confiabilidade.
-            </p>
-        </div>
-    </div>
-
-    <!-- Matchmaking Bot -->
-    <div id="artigo-matchbot" class="modal" onclick="closeModal(event, 'artigo-matchbot')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'artigo-matchbot')">&times;</span>
-            <h2>Matchmaking Bot</h2>
-            <p class="project-meta">Data: Qua, 22 Mar | Status: Em Desenvolvimento</p>
-            <p>
-                O Matchmaking Bot é um projeto inovador voltado para servidores +18 no Discord. Desenvolvido para ajudar
-                os usuários a encontrar parceiros compatíveis, o bot utiliza algoritmos de correspondência que
-                consideram interesses, preferências e histórico de interações. O planejamento inclui fases de testes
-                beta, ajustes com feedback dos usuários e a integração com outros sistemas para registrar interações e
-                sugestões. A proposta é oferecer uma experiência única e personalizada, sempre respeitando a privacidade
-                dos participantes.
-            </p>
-        </div>
-    </div>
-
-    <!-- King Labs - Projetos Principais -->
-    <div id="proj-code-tracking" class="modal" onclick="closeModal(event, 'proj-code-tracking')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-code-tracking')">&times;</span>
-            <h2>Code Tracking</h2>
-            <p class="project-meta">Status: BETA TEST | Tecnologias: JavaScript, Python, API GitHub</p>
-            <p>
-                O Code Tracking é uma extensão inovadora que visa preencher a lacuna deixada pelos sistemas tradicionais
-                de versionamento, refletindo com precisão o tempo real de programação. O projeto está em fase de testes
-                beta, com a integração de um bot para registro automático do tempo gasto e o uso de webhooks para logar
-                informações em tempo real. O planejamento contempla refinamentos na interface, otimizações de
-                performance e uma fase de feedback com desenvolvedores para ajustes contínuos.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-pesquisa-chat" class="modal" onclick="closeModal(event, 'proj-pesquisa-chat')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-pesquisa-chat')">&times;</span>
-            <h2>Pesquisa em Bate-Papo</h2>
-            <p class="project-meta">Status: Em Prototipagem | Tecnologias: IA, Python, APIs de mensageiros</p>
-            <p>
-                Este projeto propõe um aplicativo de busca inteligente para localizar mensagens antigas e relevantes em
-                conversas. Diante da dificuldade de encontrar informações importantes, o sistema utiliza modelos de
-                linguagem natural para identificar e classificar mensagens. Atualmente, estamos na fase de prototipagem
-                e testes, com o objetivo de criar um comando integrado ao Discord que permita pesquisas precisas e
-                rápidas dentro do histórico de conversas.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-artigos-cientificos" class="modal" onclick="closeModal(event, 'proj-artigos-cientificos')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-artigos-cientificos')">&times;</span>
-            <h2>App de Artigos Científicos</h2>
-            <p class="project-meta">Status: Em Planejamento | Tecnologias: IA, Python, APIs acadêmicas</p>
-            <p>
-                Com o objetivo de acelerar o acesso a informações acadêmicas, este aplicativo busca integrar diversas
-                fontes de pesquisa em uma interface unificada. O planejamento inclui a implementação de um sistema de IA
-                para identificar palavras-chave, sugestões de leitura e a integração com APIs de periódicos e bases de
-                dados científicas. A proposta prevê uma experiência que une agilidade, confiabilidade e um design
-                intuitivo para pesquisadores e estudantes.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-unity-reddead-snes" class="modal" onclick="closeModal(event, 'proj-unity-reddead-snes')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-unity-reddead-snes')">&times;</span>
-            <h2>Jogo Unity - Red Dead 2 para SNES</h2>
-            <p class="project-meta">Status: Desenvolvimento de Assets | Tecnologias: Unity, C#, Pixel Art</p>
-            <p>
-                Este projeto ambicioso visa recriar a atmosfera de Red Dead Redemption 2 em um estilo retrô,
-                reminiscente dos jogos do SNES. O desenvolvimento envolve a criação de assets pixelados, a adaptação de
-                mecânicas modernas para um ambiente 2D e uma narrativa condensada, mas fiel ao espírito do jogo
-                original. Com um cronograma bem definido, a equipe está atualmente focada na criação de personagens,
-                cenários e na implementação de um devlog automático para acompanhar o progresso.
-            </p>
-        </div>
-    </div>
-
-    <div id="04042025" class="modal" onclick="closeModal(event, '04042025')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, '04042025')">&times;</span>
-            <h2>WhatsCord</h2>
-            <p class="project-meta">Status: Planejamento | Tecnologias: Python, discord.py, SQLite</p>
-            <p>
-                A ideia é simples:
-                <br><br>
-                1. Inicializar o bot do Discord <br>
-                2. Conectar-se ao WhatsApp via API (ex: WhatsApp Web API) <br>
-                3. Criar um evento para capturar mensagens recebidas no WhatsApp <br>
-                - Quando uma mensagem for recebida, identificar o remetente e o conteúdo <br>
-                - Encaminhar a mensagem para o usuário no Discord via DM usando um embed <br>
-                4. Criar um comando para responder à mensagem do WhatsApp <br>
-                - O usuário do Discord pode usar um comando de resposta <br>
-                - O bot então encaminha a resposta para o remetente no WhatsApp <br>
-                5. Criar logs de mensagens trocadas <br>
-                6. Configurar permissões e verificar se a conexão com WhatsApp está ativa <br>
-
-                <br>
-                <br>
-            </p>
-        </div>
-
-    <div id="proj-flick" class="modal" onclick="closeModal(event, 'proj-flick')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-flick')">&times;</span>
-            <h2>Flick - Controle Financeiro</h2>
-            <p class="project-meta">Status: Desenvolvimento Inicial | Tecnologias: Python, Flask, React, SQLite</p>
-            <p>
-                Flick é um aplicativo voltado para pequenas empresas que buscam uma solução simples e eficiente para
-                gerenciar vendas e despesas. O projeto inclui a criação de um sistema backend robusto, interfaces
-                responsivas e a integração de um bot que permite o registro rápido de entradas e saídas financeiras via
-                comandos. O roadmap envolve testes de usabilidade, aprimoramento da segurança e a criação de um
-                dashboard com análises em tempo real.
-            </p>
-        </div>
-    </div>
-
-    <!-- King Labs - Projetos em Planejamento -->
-    <div id="proj-victoria-rose" class="modal" onclick="closeModal(event, 'proj-victoria-rose')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-victoria-rose')">&times;</span>
-            <h2>Jogo "Victoria Rose"</h2>
-            <p class="project-meta">Status: Em Ideação</p>
-            <p>
-                "Victoria Rose" é um projeto de jogo que une narrativa rica e mecânicas clássicas com um toque moderno.
-                O conceito explora um enredo envolvente com personagens profundos e desafios estratégicos. Atualmente, o
-                projeto passa por uma fase intensa de pesquisa de referências visuais e construção do roteiro, com
-                planos de desenvolver um protótipo inicial para testes de jogabilidade e feedback da comunidade.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-kingplusplus" class="modal" onclick="closeModal(event, 'proj-kingplusplus')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-kingplusplus')">&times;</span>
-            <h2>Linguagem King++</h2>
-            <p class="project-meta">Status: Conceitual</p>
-            <p>
-                O projeto Linguagem King++ propõe o desenvolvimento de uma linguagem de programação inovadora, com foco
-                em simplicidade, legibilidade e performance. Em fase conceitual, o planejamento inclui definição de
-                sintaxe, desenvolvimento de compiladores e a criação de uma comunidade de early adopters para validar as
-                primeiras versões da linguagem.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-mugiwara" class="modal" onclick="closeModal(event, 'proj-mugiwara')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-mugiwara')">&times;</span>
-            <h2>Mugiwara Project</h2>
-            <p class="project-meta">Status: Brainstorming</p>
-            <p>
-                Inspirado por referências culturais e estéticas, o Mugiwara Project busca explorar novos paradigmas de
-                design e interação. Em brainstorming, a equipe está definindo o conceito visual, os pilares da
-                experiência do usuário e possíveis integrações com plataformas existentes, visando um produto final que
-                surpreenda pelo seu caráter inovador.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-ai-relacionamento" class="modal" onclick="closeModal(event, 'proj-ai-relacionamento')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-ai-relacionamento')">&times;</span>
-            <h2>AI Girlfriend/Boyfriend</h2>
-            <p class="project-meta">Status: Pesquisa Inicial</p>
-            <p>
-                Este projeto explora a criação de um sistema de relacionamento virtual baseado em inteligência
-                artificial. O conceito envolve respostas personalizadas, aprendizado de comportamento e um sistema de
-                interação que evolui conforme o uso. A fase atual é de pesquisa, onde são analisadas as possibilidades
-                técnicas e éticas antes de avançar para a prototipagem.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-discord-os" class="modal" onclick="closeModal(event, 'proj-discord-os')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-discord-os')">&times;</span>
-            <h2>Discord OS</h2>
-            <p class="project-meta">Status: Conceitual</p>
-            <p>
-                O Discord OS é uma proposta revolucionária que visa transformar a forma de interagir no ambiente do
-                Discord. Pensado como um sistema operacional dedicado, ele promete integração total com ferramentas de
-                automação, personalização e monitoramento, oferecendo uma experiência única aos usuários.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-smart-mirror" class="modal" onclick="closeModal(event, 'proj-smart-mirror')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-smart-mirror')">&times;</span>
-            <h2>Smart Mirror</h2>
-            <p class="project-meta">Status: Planejamento</p>
-            <p>
-                O Smart Mirror é um espelho interativo que exibe informações personalizadas, como agenda, notícias e
-                clima, além de permitir comandos de voz. O projeto está na fase de planejamento, com definição de
-                hardware, layout da interface e estudo das melhores integrações com serviços IoT.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-finance-tracker" class="modal" onclick="closeModal(event, 'proj-finance-tracker')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-finance-tracker')">&times;</span>
-            <h2>Personal Finance Tracker (Bot)</h2>
-            <p class="project-meta">Status: Em Análise</p>
-            <p>
-                Este bot foi concebido para ajudar usuários a gerenciar suas finanças pessoais de maneira prática e
-                automatizada. O planejamento inclui a integração com múltiplas fontes de dados, dashboards
-                personalizados e a implementação de comandos inteligentes para inserção de informações financeiras.
-            </p>
-        </div>
-    </div>
-
-    <!-- King Labs - Projetos Experimentais e Estudos -->
-    <div id="proj-neural-network" class="modal" onclick="closeModal(event, 'proj-neural-network')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-neural-network')">&times;</span>
-            <h2>Neural Network</h2>
-            <p class="project-meta">Status: Estudos Iniciais</p>
-            <p>
-                Este projeto experimental foca na criação de redes neurais customizadas, visando testar novas
-                arquiteturas e algoritmos de aprendizado profundo. O planejamento contempla experimentos com diferentes
-                frameworks e a realização de benchmarks para validar as hipóteses de melhoria na performance.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-chat-privacidade" class="modal" onclick="closeModal(event, 'proj-chat-privacidade')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-chat-privacidade')">&times;</span>
-            <h2>Real-time Chat App para Privacidade</h2>
-            <p class="project-meta">Status: Prototipagem</p>
-            <p>
-                Focado em segurança, este aplicativo de chat utiliza criptografia ponta-a-ponta para garantir a
-                privacidade das comunicações. Em fase de prototipagem, o projeto envolve testes de usabilidade e a
-                integração com protocolos de segurança modernos.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-gerenciador-senhas" class="modal" onclick="closeModal(event, 'proj-gerenciador-senhas')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-gerenciador-senhas')">&times;</span>
-            <h2>Gerenciador de Senhas Offline</h2>
-            <p class="project-meta">Status: Em Pesquisa</p>
-            <p>
-                Com a proposta de oferecer total segurança, este gerenciador permite que as senhas sejam armazenadas
-                localmente, sem qualquer conexão com a internet. O estudo atual foca em criptografia avançada e na
-                usabilidade da interface para garantir facilidade e segurança.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-kingdb" class="modal" onclick="closeModal(event, 'proj-kingdb')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-kingdb')">&times;</span>
-            <h2>KingDB</h2>
-            <p class="project-meta">Status: Em Conceituação</p>
-            <p>
-                KingDB é a proposta para um banco de dados proprietário, otimizado para alta performance e integração
-                com os demais sistemas King Labs. A etapa atual envolve o mapeamento dos requisitos e a definição de uma
-                arquitetura escalável, com foco em segurança e velocidade de acesso.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-algorithm-visualizer" class="modal" onclick="closeModal(event, 'proj-algorithm-visualizer')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-algorithm-visualizer')">&times;</span>
-            <h2>Algorithm Visualizer</h2>
-            <p class="project-meta">Status: Em Ideação</p>
-            <p>
-                A ideia é criar uma ferramenta interativa para a visualização e entendimento de algoritmos, permitindo
-                simulações dinâmicas e uma compreensão mais profunda dos processos computacionais. O planejamento
-                envolve a definição de casos de uso, prototipagem da interface e a escolha dos algoritmos iniciais a
-                serem demonstrados.
-            </p>
-        </div>
-    </div>
-
-    <!-- King Labs - Projetos de Entretenimento/Fanmade -->
-    <div id="proj-bot-comercial" class="modal" onclick="closeModal(event, 'proj-bot-comercial')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-bot-comercial')">&times;</span>
-            <h2>Bot de Discord para Comercialização de Conteúdo</h2>
-            <p class="project-meta">Status: Em Desenvolvimento</p>
-            <p>
-                Este bot foi pensado para facilitar a venda e distribuição de conteúdo exclusivo em servidores de
-                Discord, automatizando processos de pagamento e entrega. O projeto conta com um roadmap que inclui
-                integração com plataformas de pagamento e testes com usuários para aprimorar a experiência.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-travel-booking" class="modal" onclick="closeModal(event, 'proj-travel-booking')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-travel-booking')">&times;</span>
-            <h2>Travel Booking System</h2>
-            <p class="project-meta">Status: Planejamento</p>
-            <p>
-                Um sistema inovador para reservas de viagens, com interface intuitiva e integração com diversos meios de
-                pagamento. O planejamento detalhado abrange o mapeamento de requisitos, prototipagem da UX/UI e
-                definição dos parceiros estratégicos para a viabilização do projeto.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-class09" class="modal" onclick="closeModal(event, 'proj-class09')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-class09')">&times;</span>
-            <h2>Class of '09 - Gayer Version</h2>
-            <p class="project-meta">Status: Conceitual</p>
-            <p>
-                Uma releitura irreverente de um clássico, combinando humor e inovação. O projeto está em fase
-                conceitual, com definições de narrativa, estilo visual e mecânicas de jogo que visam surpreender e
-                entreter um público exigente.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-yandere2d" class="modal" onclick="closeModal(event, 'proj-yandere2d')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-yandere2d')">&times;</span>
-            <h2>Yandere Simulator 2D</h2>
-            <p class="project-meta">Status: Em Design</p>
-            <p>
-                Adaptação 2D do culto Yandere Simulator, focando em mecânicas de stealth e narrativa envolvente. Em fase
-                de design, a equipe trabalha na definição dos elementos visuais e na transição das mecânicas do jogo
-                original para o formato 2D.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-lastofus2d" class="modal" onclick="closeModal(event, 'proj-lastofus2d')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-lastofus2d')">&times;</span>
-            <h2>The Last of Us 2D</h2>
-            <p class="project-meta">Status: Em Prototipagem</p>
-            <p>
-                Versão 2D inspirada no aclamado The Last of Us, com foco em narrativa condensada e jogabilidade
-                adaptada. O projeto já conta com esboços de cenários e personagens, e segue com testes de mecânica para
-                oferecer uma experiência única no formato retrô.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-noir-game" class="modal" onclick="closeModal(event, 'proj-noir-game')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-noir-game')">&times;</span>
-            <h2>Noir Game</h2>
-            <p class="project-meta">Status: Brainstorming</p>
-            <p>
-                Projeto de jogo com uma atmosfera noir, combinando elementos de mistério e desafios de lógica. O
-                planejamento envolve a criação de um roteiro envolvente, desenvolvimento de um estilo artístico que
-                remeta aos clássicos filmes noir e a experimentação com mecânicas de investigação.
-            </p>
-        </div>
-    </div>
-
-    <div id="03042025" class="modal" onclick="closeModal(event, '03042025')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, '03042025')">&times;</span>
-            <h2>Tinder Bot Discord: Matchmaking no Caos</h2>
-            <p class="project-meta">Status: Em Beta</p>
-            <p>
-                <br>
-                Tudo começou com uma ideia simples: facilitar o matchmaking no servidor de ERP +18. A premissa? Um bot que cruzasse os
-                resultados do BDSMTest.org com os cargos do Discord para sugerir matches perfeitos. Simples na teoria, um caos na
-                prática.
-                <br><br>
-                <h3>Primeiros Passos: O Casamento Entre Código e Fetiches</h3>
-                <br>
-                A primeira decisão foi definir a estrutura do bot. Parti para o Discord.py (porque sou old school), configurei os
-                intents e comecei a brincar com o banco de dados. A ideia era armazenar os resultados do teste e criar um sistema de
-                compatibilidade baseado em porcentagens. Dom 100%? Vai encontrar um Sub 100%. Switch? Bom, a vida é cheia de escolhas.
-                <br><br>
-                Mas aí veio o primeiro problema: coletar os resultados do BDSMTest.org de um jeito intuitivo. Escolhi um modal
-                interativo para o input e armazenei tudo no banco de dados.
-                <br><br>
-                <h3>A Matemática do Tesão</h3>
-                <br>
-                Criar um sistema de matchmaking envolvia mais do que apenas comparar números. Precisava de uma fórmula que equilibrasse
-                a compatibilidade e evitasse que um Switch de 50% caísse no limbo dos "quase tudo, mas não tudo". A solução? Um cálculo
-                baseado na diferença entre os valores dominantes, dando prioridade a opostos complementares.
-                <br><br>
-                Tradução: se um Dom está buscando um Sub, a prioridade é alguém com submissão máxima. Mas se não houver um match
-                perfeito, ele pega o segundo melhor.
-                <br><br>
-                <h3>O Pior Inimigo: O OAuth2</h3>
-                <br>
-                Quando chegou a hora de adicionar o bot ao servidor, veio o drama: Discord bloqueando o link de convite. Debuguei,
-                revisei permissões, mexi no OAuth2. Nada. No fim, o problema era uma flag maldita no Developer Portal. Depois de
-                resolver isso, o bot finalmente entrou no servidor.
-                <br><br>
-                <h3>O Estado Atual: Quase Lá</h3>
-                <br>
-                Agora o bot já faz matchmaking funcional. Usuários podem rodar `/matchmake` e ele encontra um parceiro compatível
-                baseado nos dados armazenados. Ainda falta otimizar algumas respostas para que o bot pareça menos um algoritmo e mais um
-                wingman digital.
-                <br><br>
-                Próximos passos? Refinar os critérios de compatibilidade, adicionar opções de filtro e talvez até um sistema de
-                "curtidas" para deixar o negócio mais interativo. Afinal, até bots de ERP merecem um pouco de carinho.
-                <br><br>
-                Fique de olho para as próximas atualizações!
-
-            </p>
-        </div>
-    </div>
-
-
-    <div id="proj-bot-yandere" class="modal" onclick="closeModal(event, 'proj-bot-yandere')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-bot-yandere')">&times;</span>
-            <h2>Bot de Discord Gaming para Yandere Simulator</h2>
-            <p class="project-meta">Status: Em Desenvolvimento</p>
-            <p>
-                Focado em complementar a experiência de jogadores de Yandere Simulator, este bot trará comandos
-                temáticos, atualizações em tempo real e integração com rankings internos do jogo. O desenvolvimento
-                inclui testes em servidores dedicados e ajustes com base no feedback dos usuários.
-            </p>
-        </div>
-    </div>
-
-    <!-- King Labs - Projetos Práticos e Úteis -->
-    <div id="proj-recipe-finder" class="modal" onclick="closeModal(event, 'proj-recipe-finder')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-recipe-finder')">&times;</span>
-            <h2>Recipe Finder</h2>
-            <p class="project-meta">Status: Em Ideação</p>
-            <p>
-                Aplicativo que sugere receitas com base nos ingredientes disponíveis. O planejamento abrange o
-                desenvolvimento de algoritmos de recomendação, integração com bancos de dados de receitas e uma
-                interface intuitiva para que o usuário possa montar seu cardápio de forma prática.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-bittorrent" class="modal" onclick="closeModal(event, 'proj-bittorrent')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-bittorrent')">&times;</span>
-            <h2>Criar meu próprio BitTorrent</h2>
-            <p class="project-meta">Status: Em Pesquisa</p>
-            <p>
-                Projeto técnico voltado para o desenvolvimento de um protocolo P2P seguro e eficiente. A proposta
-                envolve o estudo das principais limitações dos protocolos existentes, a criação de um modelo próprio e
-                testes de integração com diferentes tipos de redes.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-treinos" class="modal" onclick="closeModal(event, 'proj-treinos')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-treinos')">&times;</span>
-            <h2>Planejador de Treinos</h2>
-            <p class="project-meta">Status: Em Planejamento</p>
-            <p>
-                Ferramenta destinada a auxiliar personal trainers e entusiastas na organização de rotinas de exercícios.
-                O projeto inclui definição de parâmetros, integração com dispositivos de monitoramento e a criação de
-                dashboards personalizados para acompanhamento de desempenho.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-pomodoro" class="modal" onclick="closeModal(event, 'proj-pomodoro')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-pomodoro')">&times;</span>
-            <h2>Pomodoro Timer</h2>
-            <p class="project-meta">Status: Em Desenvolvimento</p>
-            <p>
-                Aplicativo que implementa a técnica Pomodoro para melhorar a gestão do tempo e aumentar a produtividade.
-                O desenvolvimento envolve uma interface simples, notificações inteligentes e relatórios de desempenho,
-                possibilitando aos usuários ajustar seus ciclos de trabalho de forma dinâmica.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-code-editor" class="modal" onclick="closeModal(event, 'proj-code-editor')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-code-editor')">&times;</span>
-            <h2>Real-time Code Editor</h2>
-            <p class="project-meta">Status: Em Conceituação</p>
-            <p>
-                Editor de código colaborativo que permite a múltiplos usuários editar e visualizar mudanças em tempo
-                real. O conceito envolve a integração de ferramentas de versionamento, chat interno e módulos de
-                depuração, visando otimizar a colaboração em projetos de desenvolvimento.
-            </p>
-        </div>
-    </div>
-
-    <!-- King Labs - Gestão e Automação no Discord -->
-    <div id="proj-webhooks" class="modal" onclick="closeModal(event, 'proj-webhooks')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-webhooks')">&times;</span>
-            <h2>Webhooks</h2>
-            <p class="project-meta">Status: Implementação Inicial</p>
-            <p>
-                Desenvolvimento de webhooks customizados para integração com serviços externos, permitindo automação e
-                notificação em tempo real dentro do Discord. O planejamento já inclui testes de integração e a definição
-                dos principais endpoints para comunicação.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-painel-status" class="modal" onclick="closeModal(event, 'proj-painel-status')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-painel-status')">&times;</span>
-            <h2>Painel de Status</h2>
-            <p class="project-meta">Status: Em Desenvolvimento</p>
-            <p>
-                Dashboard interativo para monitoramento de serviços e processos no Discord. O sistema será integrado a
-                diversos módulos, fornecendo estatísticas em tempo real e facilitando a tomada de decisões.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-comandos-personalizados" class="modal" onclick="closeModal(event, 'proj-comandos-personalizados')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-comandos-personalizados')">&times;</span>
-            <h2>Comandos Personalizados</h2>
-            <p class="project-meta">Status: Em Prototipagem</p>
-            <p>
-                Ferramenta que permite aos administradores criar comandos customizados para enriquecer a interação no
-                Discord. O projeto abrange o desenvolvimento de uma interface intuitiva para configuração e a integração
-                com o sistema de bots já existentes.
-            </p>
-        </div>
-    </div>
-
-    <div id="proj-sistema-recompensas" class="modal" onclick="closeModal(event, 'proj-sistema-recompensas')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal(event, 'proj-sistema-recompensas')">&times;</span>
-            <h2>Sistema de Recompensas</h2>
-            <p class="project-meta">Status: Em Planejamento</p>
-            <p>
-                Solução integrada para incentivar a participação dos membros no Discord por meio de um sistema de pontos
-                e prêmios. O planejamento detalhado inclui definição de regras, mecânicas de pontuação e a criação de um
-                dashboard para acompanhamento e resgate das recompensas.
-            </p>
+            <span class="close-btn" onclick="closeModal(event)">&times;</span>
+            <div id="modal-content-container"></div>
         </div>
     </div>
 
     <script>
-        function openModal(id) {
-            document.getElementById(id).style.display = 'flex';
+        // Exemplo de dados – substitua por chamada à API do LinkedIn ou seu endpoint
+        const posts = [
+            {
+                id: "post1",
+                date: "Ter, 08 Abr",
+                title: "Oque ainda me motiva a programar?",
+                preview: "Sempre fui apaixonada por jogos, tecnologia, software.",
+                content: `
+                    <h2>
+                        Sempre fui apaixonada por jogos, tecnologia, software
+                    </h2>
+                    <p>
+                        Ainda me lembro da primeira vez que vi um fangame de Zelda e me apaixonei pela ideia de conseguir criar meu proprio jogo. Aprendi lógica de programação por causa das minhas 8 mil horas de RPG Maker na Steam (sim, esse numero é real) e com o tempo isso evoluiu pra Javascript, pra criar sites, pra criar novos jogos em C++, descobri oque era Python, criei scripts pra excel, enfim...
+                    <br><br>
+
+                        Eu me inseri nesse mundo muito nova e meu sonho de carreira é algum dia ser game dev pra acalmar meu coraçãozinho de criança. Mas o resto de mim quer ser boa em todo tipo de tecnologia possivel, ao ponto de eu começar a estudar Hardware recentemente.
+                    <br><br>
+
+                        Mas resumindo, oque motiva a programar é o fato de que eu sei que posso tornar qualquer ideia da minha cabeça em realidade usando linhas de código
+                    </p>
+                `
+            },
+            {
+                id: "post2",
+                date: "Ter, 08 Abr",
+                title: "Top Crimes de Guerra",
+                preview: "Juro que não aguento",
+                content: `
+                    <h2>Crimes de guerra com python:</h2>
+                    <img src="/posts/programming-war-crimes-1.jpg">
+                  `
+            },
+            {
+                id: "post3",
+                date: "Ter, 08 Abr",
+                title: "DM Delete Messages",
+                preview: "Ideia de bot de discord.",
+                content: `
+                  <p>Então... um amigo meu me deu uma ideia de um bot de discord pra apagar suas mensagens na DM com alguem, basicamente pro caso de um termino de webnamoro (acontece muito) e quem quer deixar fotos suspeitas de meses atrás na sua conversa, né?
+                    <br><br>
+
+                A ideia era realmente criar um bot que apagasse todas as mensagens nas DM do user.
+                    <br><br>
+                Mas eu me deparei com um problema muito rapido. O Discord não permite que bots tenham acesso ao comando de excluir mensagens na DM diretamente
+                    <br><br>
+
+                Então, a minha ideia agora é que o bot chame um script que rode diretamente no PC.
+                    <br><br>
+
+                - Bot no Discord: Recebe o comando /apagar-dms {quantidade} e aciona um script local.
+                - Abre o Discord Web em segundo plano.
+                - Usa atalhos rápidos e comandos DOM para apagar mensagens sem precisar de cliques lentos.
+                - Pode apagar até 999 mensagens de forma eficiente.
+                - Threading & Async: O código usará múltiplas threads para deletar rápido sem sobrecarregar o PC.
+                - Taxa Segura para o Discord: Apaga rápido, mas respeitando os limites do Discord pra evitar ban.
+                    <br><br>
+
+                Honestamente eu não tenho a menor ideia se isso pode dar certo. Mas eu vou tentar. Porque não? </p>`
+            },
+            {
+                id: "post4",
+                date: "Qua, 09 Abr",
+                title: "Discord Age Verification Bot",
+                preview: " Chopper é um bot de verificação de idade para Discord. ",
+                content: `
+                    <h2>Discord Age Verification Bot</h2>
+                    <p>
+                    Oh, seguinte, minha namorada é dona de um servidor de discord +18.
+                        <br><br>
+                    E é um problema mais que comum a participação desenfreada de menor de idade, apesar de esforços, e verificações de idade.
+                        <br><br>
+                    Maas, pra uma camada extra de segurança, eu passei uns dias na minha vida criando o.... Chopper! (A Escolha do nome é dela, ela é muito fã de one piece)
+                        <br><br>
+                    Basicamente ele identifica quando um user entra no servidor, cria um canal de verificação de entrada que gera um modal pedindo a data de aniversario do usuario, armazena esta em um banco de dados. Além de Logs de registro e comandos de ADM.
+                        <br><br>
+                    Tenho muito orgulho do Chopper 🫰
+                        <br><br>
+                    https://lnkd.in/en8XZJVf       
+                                        
+                    </p>
+                  `
+            },
+        ];
+
+        // Função para renderizar os posts na página
+        function renderPosts() {
+            const container = document.getElementById('blog-container');
+            posts.forEach(post => {
+                const card = document.createElement('div');
+                card.classList.add('blog-card');
+                card.setAttribute('onclick', `openModal("${post.id}")`);
+                card.innerHTML = `
+          <div class="card-header">
+            <small>${post.date}</small>
+          </div>
+          <div class="card-title">
+            <h3>${post.title}</h3>
+          </div>
+          <div class="card-preview">
+            <p>${post.preview}</p>
+          </div>
+        `;
+                container.appendChild(card);
+            });
         }
-        function closeModal(event, id) {
-            if (event.target.classList.contains('modal') || event.target.classList.contains('close-btn')) {
-                document.getElementById(id).style.display = 'none';
+
+        // Função para abrir o modal com o conteúdo completo do post
+        function openModal(postId) {
+            const post = posts.find(p => p.id === postId);
+            if (post) {
+                document.getElementById('modal-content-container').innerHTML = `
+          <p class="project-meta">${post.date}</p>
+          ${post.content}
+        `;
+                document.getElementById('post-modal').style.display = 'flex';
             }
         }
+
+        // Função para fechar o modal
+        function closeModal(event) {
+            if (event.target.classList.contains('modal') || event.target.classList.contains('close-btn')) {
+                document.getElementById('post-modal').style.display = 'none';
+            }
+        }
+
+        // Inicializa a renderização dos posts
+        renderPosts();
     </script>
 </body>
 
